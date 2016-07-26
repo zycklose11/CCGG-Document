@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>003 Variables Types</title>
+	<script type="text/javascript">
+	//Number, Boolean, String, Undefined, Null
+			//Type of Number 
+			var a1 = 10;
+			var a2 = 10.5;
+			var a3 = NaN; //Not a Number
+			var a4 = 1/0; //Infinity
+
+			var a5 = 070; //
+			//alert(a4);
+			//console.log(a5);
+
+			var a6 = 0.1;
+			var a7 = 0.2;
+			if((a6+a7).toFixed(1) == 0.3){
+				//if((a6+a7) == 0.3){
+				console.log('equal');
+			}else{
+				console.log('not equal');
+			}
+
+			var a8 = parseInt('aabbcc'); //Not a Number
+			//console.log(a8);
+
+			//var a9 = parseInt('12aabbcc');
+			var a9 = parseInt('aa12bbcc');
+			//console.log(a9);
+
+			//undefined data type only one value undefinied 
+			//it means you have declared the variable but not give a value
+
+			var b1;
+			//console.log(b1);
+
+			//Null
+			var b2 = null;
+			//console.log(b2);
+
+			//String
+			var str1 = "This is a string1";
+			var str2 = 'This is a string2';
+
+			//Boolean
+
+			var f1ag1 = false;
+			var flag2 = true;
+
+			//Reference Object
+			var arr = [1,2,3];       //array
+			var dates = new Date();  //date
+			var obj = {};            //Empty object
+
+			//typeof judge the type of the data
+			var c1 = 10;
+			var c2 = 10.3;
+			var c3 = true;
+			var c4 = 'abcd';
+			var c5 = new Date();
+			var c6 = NaN;
+			var c7 = [1,2,3];
+
+			for(var i = 1 ; i < 8; i++){
+				//console.log(typeof(eval('c' + i)));
+			}
+
+			var d1 = undefined;
+			console.log(d1);
+
+			var d2 = null;  //it means a reference of an empty object
+			console.log(d2);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

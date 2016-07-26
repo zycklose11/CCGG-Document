@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>003 Variables Scope</title>
+	<script type="text/javascript">
+
+		var a = 3; //number  glocal variable
+		// two kind of variables: local variable and global variable
+
+		function test(){
+			var a = 2; //local variable
+			var b = 4;
+			c = 5; // global variable
+			alert(a);
+		}
+		//alert(c);
+		test();
+		alert(b);
+		//alert(c);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
