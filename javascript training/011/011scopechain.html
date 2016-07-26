@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>011 execution context and scope chain</title>
+	<script type="text/javascript">
+
+	//the top environment is window
+	var color1 = 'blue';
+	function changeColor(){
+		var color2 = 'red';
+		console.log(color1);
+		//console.log(color3);
+		function swapColor(){
+			var color3 = color2;
+			color2 = color1;
+			color1 = color3;
+			//can access 1,2,3
+			console.log(color3);
+		}
+		//only can access 1, 2
+		swapColor();
+	}
+	//only can access 1
+	
+	changeColor();
+	//from buttom to top one by one
+	</script>
+</head>
+<body>
+
+</body>
+</html>

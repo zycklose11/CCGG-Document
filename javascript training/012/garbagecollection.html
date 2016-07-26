@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>012Garbage Collection</title>
+	<script type="text/javascript">
+
+	//Garbage Collection method one marked
+	function test(){
+		var a = 10;  //marked as using
+		var b = 20;  //marked as using
+	}
+
+	test(); //completed, marked all variables as used
+
+	//scope
+	function test1(){
+		for(var i = 1; i <= 5; i++){
+			console.log(i);
+		}
+		console.log(i);
+	} 
+
+	test1();
+
+	//js :()means running
+
+	function test2(){
+
+		(function(){
+			for(var i = 1; i <= 5; i++){
+			console.log(i);
+		}
+		})();
+		
+		console.log(i);
+	} 
+
+	test2();
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

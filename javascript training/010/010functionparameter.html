@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>10 function parameter</title>
+	<script type="text/javascript">
+			//function parameter
+			"use strict";
+			function test(a,b,c,d){
+				console.log(test.length);		//4
+
+				//arguments can only be used in the function
+				console.log(arguments.length);
+				console.log(arguments[0]);
+				console.log(arguments[1]);
+		
+				if(test.length == arguments.length){
+					return a + b;
+				} else{
+					return 'not match!';
+				}
+				
+			}
+			console.log(test(10,20,30));
+	</script>
+</head>
+<body>
+
+</body>
+</html>

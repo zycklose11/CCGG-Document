@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>005 Array</title>
+	<script type="text/javascript">
+	/*
+		the array in js like the map container in java, the length can change 
+		the array is an object
+	*/
+
+		// two methods to create an array
+		//var arr = new Array();
+		var arr = [1,2,3,4,true,'a',new Date()];
+		//console.log(arr.length);
+		arr.length = 5;
+		//console.log(arr);
+		//methods to control the array
+		//push, pop
+
+		var arr2 = [];
+		var result2 = arr2.push(1,2,true); //return the length of the new array
+		//console.log(arr2);
+		//console.log(result2);
+
+		var arr3 = [1,2,2,4]
+		var result3 = arr3.pop(); //get rid the element from the end of the array,
+		//console.log(arr3);
+		//console.log(result3);
+
+		//shift and unshift
+
+		var arr4 = [1,2,3,true, new Date()];
+		var result4 = arr4.shift();
+		//console.log(arr4);
+		//console.log(result4);
+
+		var arr5 = [1,2,3,true, new Date()];
+		var result5 = arr5.unshift(10);
+		//console.log(arr5);
+		//console.log(result5);
+
+		//splice and slice
+		//splice: 1st parameter: the begining point
+		//        2st parameter: how many you want to replace
+		//   After3rd parameter: add the new elements
+		var arr6 = [1,2,3,4,5]; // 2,3 --> 3,4,5
+		var result6 = arr6.splice(1,2,3,4,5); //134545
+		//console.log(arr6);
+		//console.log(result6);
+
+		//slice:
+		var arr7 = [1,2,3,4,5];
+		var result7 = arr7.slice(0,4);        //contains left side not contain right side 
+		//console.log(arr7);
+		//console.log(result7);
+
+		//concat join
+
+		var arr8 = [1,2,3];
+		var arr9 = [true,4,5];
+		var result8 = arr8.concat(arr9);
+		var result9 = arr8.join('-');
+		//console.log(arr8);
+		//console.log(arr9);
+		//console.log(result8);
+		//console.log(result9);
+
+		//sort , reverse
+		var arr10 = [1,2,5,4,3];
+		var arr11 = [10,2,4,1,7];
+
+		//arr10.sort();
+		arr10.reverse();  //reverse base on the place
+		//console.log(arr10);
+		//arr11.sort();
+		//console.log(arr11); //compare them as a string
+
+		function compare(value1, value2){
+			if(value1 < value2){
+				return 1;
+			}else if(value1 > value2){
+				return -1;
+			}else{
+				return 0;
+			}
+		}
+
+		arr11.sort(compare);
+		console.log(arr11);
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

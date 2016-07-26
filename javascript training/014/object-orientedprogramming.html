@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>014 object-oriented programming</title>
+	<script type="text/javascript">
+	var obj = new Object(); //var obj = {};
+	obj.name = 'mike';
+	obj.sex = 'male';
+	obj.sayName = function(){
+		console.log('This is Mike!');
+	}
+
+	//class and object
+	//first method : factory mode
+
+	function createPerson(name, sex, age){
+		var obj = {};
+		obj.name = name;
+		obj.sex = sex;
+		obj.age = age;
+
+		obj.sayName = function(){
+			console.log('This is '+this.name+'!');
+		}
+		return obj;
+	}
+
+	var p1 = createPerson('mike','male',20);
+	var p2 = createPerson('jenny','female',24);
+
+	p2.sayName();
+
+	//second method: functionility
+
+	function Person(name, age, sex){
+		this.name = name;
+		this.age = age;
+		this.sex = sex;
+		this.sayName = function(){
+			console.log('This is '+this.name+'!');
+		}
+	}
+
+	//create an object using new key word
+	var p3 = new Person('steven',20,'male');
+	p3.sayName();
+	//console.log(p3.constructor);
+	console.log(p3.constructor == Person);
+	console.log(p3 instanceof Person);
+	console.log(p3 instanceof Object);
+
+	//two methods to create object
+	//1
+	var p4 = new Person('json',20,'male');
+	console.log('name ' + name);
+	//2
+	//Person('john',23,'male')
+	//console.log(name);
+	//3
+	var o = new Object();
+	//call apply 
+	Person.call(o,'stephen',23,'male');
+	console.log(o.name);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

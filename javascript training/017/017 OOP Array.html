@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>017 OOP Array</title>
+	<script type="text/javascript">
+		//Array each
+
+		//forEach function
+
+		//var arr = [1,2,4,5,[4,[5]]];
+		//arr.forEach(function(item, index, array){
+			//console.log(item);
+		//})
+
+		//achieve all by own
+		var arr = [1,2,4,5,[6,[2,[8]]]]; //arr.length
+		Array.prototype.each = function(fn){
+			try{
+				//transvers every item of the array 
+
+				this.i || (this.i = 0);   //counter
+				if(this.length > 0 && fn.constructor == Function){
+						while(this.i < this.length){
+							//get every element in the array
+							var element = this[this.i];
+							//if we have the element and the elemnet is an array
+							if(element && element.constructor == Array){
+								//recursion
+								element.each(fn);
+							}else{
+								//if not an array it is a single element
+								fn.apply(element,[element]);
+							}
+							this.i++;
+					
+						}
+						this.i = null;//garbage collection
+				}
+
+			}catch(ex){
+				//do something
+			}
+
+			return this;
+		}
+		arr.each(function(item){
+			console.log(item);
+		});
+
+
+		//console.log(arr2);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

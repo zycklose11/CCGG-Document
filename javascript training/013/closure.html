@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>013 closure</title>
+	<script type="text/javascript">
+	var name ='mike';
+	var obj = {
+		name : 'micheal',
+		getName: function(){
+			return function(){
+				return this.name;
+
+			}
+		}
+	};
+	console.log(obj.getName()());
+	
+	var name ='mike';
+	var obj = {
+		name : 'micheal',
+		getName: function(){
+			//this is point to obj
+			var o = this;
+			return function(){
+				return o.name;
+			}
+		}
+	};
+
+	console.log(obj.getName()());
+
+
+	//closure is a function can access another function scope variables
+	//private protect the variables
+	//1
+	function f(x){  //2
+		var temp = x;  //local variable
+		return function(x){	//3
+			temp += x;
+			console.log(temp);
+		}
+	}
+
+	var a = f(50);
+	console.log(a);
+	a(5);
+	a(10);
+	a(20);
+	
+	</script>
+</head>
+<body>
+
+</body>
+</html>

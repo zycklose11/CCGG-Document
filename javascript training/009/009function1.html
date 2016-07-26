@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>009 function1</title>
+	<script type="text/javascript">
+	function test(a, b){
+		//console.log(11);
+		return a + b;
+		//console.log(22);
+	}
+
+	var result = test(10,2);
+	//console.log(result);
+	console.log(typeof test);//function is a type of data
+
+	function test1(a){
+		a();
+
+	}
+	function test2(){
+		console.log('test2 running')
+	}
+	test1(test2);
+//you can put one function in another function
+	function test3(){
+		function test4(){
+			console.log('test4 running!')
+		}
+
+		//test4();
+	}
+
+	test3();
+	</script>
+</head>
+<body>
+</body>
+</html>

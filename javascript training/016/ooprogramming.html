@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>016common functions</title>
+	<script type="text/javascript">
+			//Object.getPrototypeOf();
+			function Person(){
+
+			}
+Object.prototype
+			Person.prototype.name = 'mike';
+			Person.prototype.age = 30;
+			Person.prototype.sayName = function(){
+				console.log('This is name');
+			}
+			
+			var p1 = new Person();
+			console.log(p1.name);
+			var prototypeObj = Object.getPrototypeOf(p1);
+			console.log(prototypeObj);
+			
+
+			var p2 = new Person();
+			p2.name = 'jenny';
+			//delete p2.name;
+			console.log(p2.name);
+
+			var p3 = new Person();
+			p3.name = 'steven';
+			p3.age = 30;
+			console.log(p3.name);
+			console.log(p3);
+			console.log(p3.hasOwnProperty('age'));
+
+			//in : for - in
+			var p4 = new Person();
+			console.log('p4' + p4.hasOwnProperty('age'));
+			console.log('p4' + ('age' in p4));
+			var p5 = new Person();
+			p5.name = 'stephen';
+			console.log('name' in p5);
+
+			//create a method to judge if one attribute is in the prototype
+			function hasPrototypeProperty(object, attribute){
+				return !object.hasOwnProperty(attribute) && attribute in object;
+			} 
+
+			var p6 = new Person();
+			//p6.name = 'jordan';
+			console.log(hasPrototypeProperty(p6, 'name'));
+
+			//Object.keys();
+			var p7 = new Person();
+			p7.name = 'json';
+			p7.age  = 25;
+			var arr = Object.keys(p7);
+			console.log(typeof(arr));
+			console.log(arr);
+			var arr2 = Object.keys(Person.prototype);
+			console.log(arr2);
+
+			//constructor property
+			var arr3 = Object.getOwnPropertyNames(Person.prototype);
+			console.log(arr3);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

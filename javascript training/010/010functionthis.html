@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>010 function this key word</title>
+	<script type="text/javascript">
+		//this key word
+		'use strict';
+		var key = 10;
+		function test(){
+			this.key = 20;
+		}
+
+		//window.test();
+		//this is always pointed to the environment which uses it
+		window.test();
+		//console.log(test.key); 
+		console.log(key);
+		console.log(window.key);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

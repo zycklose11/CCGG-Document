@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>007 delete depulicate in array</title>
+	<script type="text/javascript">
+			var arr = [2,1,2,10,2,'toString','toString',5,1,10,13];
+			//var arr = [2,1,2,10,2,'a','a',5,1,10,13];
+			// js object feature : key in js object can not be repeated
+			var obj = new Object();
+			obj.name = 'mike';
+			obj.age = 30;
+
+			//console.log(obj.name);
+			obj.name = 'json';
+
+			//console.log(obj.name);
+
+			//1.make the array to a js object
+			function toObject(arr){
+				var obj = {};
+
+				for(var i = 0; i < arr.length; i++){
+					//2.make the value of the array to the key of the new object
+					obj[arr[i]] = 1;
+				}
+				console.log('obj',obj);
+				return obj;
+			}
+			
+			//3.make the object to an array
+
+			function keys(obj){
+				var arr = [];
+				for(var attr in obj){
+					console.log('attr' ,attr);
+					if(obj.hasOwnProperty(attr)){
+						arr.push(attr);
+						console.log('arr',arr);
+					}
+				}
+				return arr;
+			}
+
+			function uniq(newarr){
+				return keys(toObject(newarr));
+			}
+			console.log(uniq(arr));
+	</script>
+</head>
+<body>
+
+</body>
+</html>

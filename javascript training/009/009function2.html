@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>009 function2</title>
+	<script type="text/javascript">
+	//3 methods to create a function
+
+	//1.
+
+	function test1(){
+		console.log('this is test1');
+	}
+	test1();
+
+	//2. recommended
+	var test2 = function(){
+		console.log('this is test2');
+	}
+	test2();
+
+	//3.
+	var test3 = new Function('a','b','return a + b;');
+	console.log(test3(1,2));
+
+	//the sequence for the two methods
+	 var test5 = function(){
+    	console.log('test5');
+    }
+
+    function test4(){
+    	console.log('test4');
+    }
+        test5();
+    test4();
+
+   
+
+    var k = 1;
+    function test6(){
+    	var k = 2;
+    	//function test(){ return k;}
+    	//var test = function(){return k;}
+    	var test = new Function('return k');
+       	console.log(test());
+    }
+    test6();
+	</script>
+</head>
+<body>
+
+</body>
+</html>

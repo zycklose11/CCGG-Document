@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>010 function apply call</title>
+	<script type="text/javascript">
+		//call apply
+		function sum(x,y){
+
+			return x + y;
+		}
+
+		function call1(num1, num2){
+			return sum.call(this, num1, num2);
+		}
+
+		function apply1(num1, num2){
+
+			return sum.apply(this, [num1,num2]);
+		}
+
+		console.log(call1(10,20));
+		console.log(apply1(10,20));
+
+		//larger the scope
+		var color = 'red';
+		var obj = {color:'blue'};
+		var obj2 = {color:'yellow'}
+		function showColor(){
+			console.log(this.color);
+		}
+		showColor.call(this);
+
+		//overwrite
+		showColor.call(obj);
+		showColor.call(obj2);
+
+		//call method
+
+		function test1(a,b){
+			this.sum = a + b;
+			return a + b;
+		}
+
+		function Obj(x, y){
+			this.x = x;
+			this.y = y;
+		}
+
+		var o = new Obj(10,20);
+		console.log(o);
+		o.method = test1;
+		//console.log(o.method(o.x,o.y));
+		delete o.method;
+		console.log(test1.call(o, o.x, o.y));
+		console.log(o);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
