@@ -1,0 +1,106 @@
+JavaScript Screening Test
+1. When the code below is executed, what value is logged to the console? Please explain.
+var a = 7;
+function foo () { 
+this.a = 13; 
+bar();
+} 
+function bar () {
+console.log ( this.a );
+}
+foo();
+
+It will console log "13". This is because "this.a" in "bar()" indicates to the value of "a" which is the host of "bar()", that means it is the value of "a" in "foo()". It is 13. 
+
+2. Refactor and optimize the following:
+var arr = new Array();
+arr[0] = "apple"; 
+arr[1] = "orange"; 
+arr[2] = "banana";
+
+for (i = 0; i <arr.length; i++) {
+var rx = new RegExp("^a*b+" , "g");
+console.log(arr[i].match(rx));
+}
+
+null
+null
+[b]
+"^" means at the beginning of one string. "a*" means must with empty or "a"or "aa" or "aaa"... "b+" means must with "b" or "bb" or "bbb".. "g" means find the match in global. So "apple" and "orange" did not match. But "banana" start with "b", so the result is "[b]".
+3. Explain why the value of foo.count is never incremented.
+function foo ( num ) { 
+console.log ( "foo: " + num );
+this.count++; 
+}
+
+foo.count = 0; 
+var i; 
+for ( i = 0 ; i < 10 ; i ++ ) { 
+if ( i > 5 ) { 
+foo ( i ); 
+} 
+} 
+// foo: 6 
+// foo: 7 
+// foo: 8 
+// foo: 9 
+console.log ( foo.count ); // Still 0!
+
+This is because "this.count++" in the foo function means increase the "count" value which is global variable. So the local variable "foo.count" is still 0.
+
+4. Rewrite the above example so that foo.count is properly incremented. 
+
+function foo ( num ) { 
+console.log ( "foo: " + num );
+foo.count++; 
+}
+Here I change the "this.count++" to "foo.count++". So here the local "count" is incresing instead of global "count", in another word the "foo.count" is increasing.
+
+5. Rewrite the test condition in the if statement so that the expression inside the conditional block is executed.
+var a = 0.1,
+    b = 0.2,
+    c = a + b;
+if (c === 0.3) {
+console.log ("Math is fun!");
+}
+
+var a = 0.1,
+    b = 0.2,
+    c = a + b;
+if (c.toFixed(1) == 0.3.toString()) {
+console.log ("Math is fun!");
+}
+This is because c will equal to 0.300000004. So they are not euqal. Here I used "toFixed(1)" method to change the value only contain one digit. But the type is string now. So I also changed "0.3" to string. And the triple condition is true now. 
+6. Explain how the value of vara can be truthy, and yet not loosely equal to true.
+var a = 13;
+var b = true;
+if (a) {
+console.log (Boolean(a)); //true
+}
+console.log (a == b); // false
+
+First one because a is a Not Zero number, so the Boolean of a is true.
+Second one because as a number only "1 == true" is true. For double equal condition, when other number except 0 and 1 compare with Boolean value. In JS firstly it will transform Boolean to number. So in this question true will transform to number 1 and of course it is not equal to number 13. So the result is false.
+7. The following utility function extends an object by adding properties and methods from an extension object. Unfortunately, extend has a bug. Can you spot it?
+var extend = function (obj, extension) {
+if (typeof obj === "object" &&typeof extension === "object") {
+for (var i in extension) {
+if (extension.hasOwnProperty(i) &&
+!obj.hasOwnProperty(i)) 
+{
+obj[i] = extension[i];
+}
+}
+return obj;
+}
+}
+
+Bug:
+1: "hasOwnProperty()" will only check the properties in current object. If we also want to check the properties in its parent's object, we have to code like this: "i in extension".
+2: If extension is not an object, the console is undefined. So here we add an else condition:
+else{
+  return obj;
+}
+So if the extension is not an object, it will return the original obj object.
+3.if obj or extension is an array, it will add the index of the array in the object, it is not right,
+we should change typeof obj === 'object' to obj.constructor === Object

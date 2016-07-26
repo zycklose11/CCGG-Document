@@ -1,0 +1,434 @@
+vendor
+1.the difference between javascript and Jquery
+2.how to use the jquery Ajax?
+3.What kind of URL used in Ajax?
+4.how to refer jquery library in your project?
+5.new features in HTML5?
+6.the challenge facing with the grunt?
+7.how to access the private method using Jasmine?
+8.access modifier in javascript?
+9.what is dependency injection?
+--------------------------------------------------------------------------------------------------------------
+vendor
+1.how to display many views in one page
+using ui-router 
+2.can you tell me what is $q
+defer.promise from ajax call
+3.can you tell me what ng-app ng-model
+4.$http $rescource
+5.javascript protype inheritance
+6.hava you used some design pattern in javascript?
+7.difference between apply and call
+8.closure?
+9.what is the project?what kind of project will it do ?
+10.What is i18n and L10n? international angularjs?
+--------------------------------------------------------------------------------------------------------------
+vendor
+1, generatar in ECMA6?
+2, How communication between models?
+3, How to test the communication between models?
+4, How to disable $timeout and $watch?
+5, What is two way binding and one-way binding?
+
+
+--------------------------------------------------------------------------------------------------------------
+vendor
+1. What would be the difference of creating a mock and partially firing on a real object
+2. Write a custom directive in angularjs to consume a web service api
+
+--------------------------------------------------------------------------------------------------------------
+vendor
+1. Could you please introduce me your last project
+2. What is the biggest changllenge in the project
+3. What are the primary backend technology used in the project
+4. Do you have expeirence in multi thread and ?? programming
+5. Do you have any experience of maven
+6. Do you know the maven repository and devs?
+7. explain what the ?? and the drawbacks of it?
+8. Do you have any experience in Spring? Use spring webservice
+9. control button in spring
+
+--------------------------------------------------------------------------------------------------------------
+vendor
+1. Could you explain how did you handle inheritence in javascript?
+2. What is negative infinity in javascript? Number.NEGATIVE_INFINITY
+3. Can you explain to me the 
+4. what is prompt?
+5. How do you do animation in jQuery?
+6. Can you explina to me some security issues in AJAX?
+--------------------------------------------------------------------------------------------------------------
+vendor
+1. Why do you use bootstrap3
+2. What is the reason to use header, footer and article, is you have the span h tags
+3. new features you have used in css3?
+4. What is the workflow technology
+--------------------------------------------------------------------------------------------------------------
+vendor
+1. Can we have multiple document.ready function in the same page?
+2. $.noconflit()?
+3. clone function in jQuery
+--------------------------------------------------------------------------------------------------------------
+
+vendor
+1. Can you introduce yourself and the last project you have done especially in UI
+2. coffee script???
+3. tasks to build, two different files, build website with HTML CSS to be the same as the img file shows
+
+--------------------------------------------------------------------------------------------------------------
+
+
+aem vendor
+1. Difference between == and ===?
+2. Benifit of angularjs over jquery?
+3. Nodejs different from angularjs?
+4. XML and json, which one is better?
+--------------------------------------------------------------------------------------------------------------
+
+client
+1. Could you give a brief review of UI ... to me?
+4. Can you give the difference of factory and services
+5. Did you use any thrid party libraries and create any custom directive?
+6. Did you use any event catching machnisims? 
+7. What you've done with broadcast?
+8. You have ng-click double-click on the button, why do you need angular broadcast
+9. In css, did you use any preprocess? LESS and SAS
+10. What do you create disired design for computer and other mobile devices
+11. In angular, what is an isolate scope?
+
+
+--------------------------------------------------------------------------------------------------------------
+
+Verizon
+1. Where you locate, east coast or west coast
+2. Our team, what we do...
+3. lastest job and the responsibility descriptions?
+4. What did you do with JQuery?
+5. JQuery plugins functions?
+6. Can you tell me a situation that you have to use jquery appendTo method?
+7. If I have a <ul>, and 5 different <li>, how can I get to the <li> number 3?
+8. webpage have multiple <ul> with multiple <li>, how to get to the correct <li> you need?
+9. AJAX: can you describe, how you make the call to the server and grab the data? ANd then, how you catch the data from the server, and check whether it successes or fail?
+10. Describe couple attributes in HTML5
+11. What we use that attributes for?
+12. What is the difference between css visiability=hidden, and the display=none?
+13. Can you describe active work culture in javascript
+14. What did you describe the parameter from the url
+15. jQuery date picker.....jQuery plugin
+16. what was the huge module in jQuery(related to its own work experience)
+17. what is your favourite programming language? What did you use before that?
+18. What is the most interesting code you use to solve the chanllenges
+19. In jQuery, why do you use a document ready
+20. what is the jquery or javascript method you use to extract data form the response
+21. What kind of methods can you use to get into an object to get the key values
+
+--------------------------------------------------------------------------------------------------------------
+
+Bottom line
+1. How do you refine the UI?
+2. Agile workflow you involved in?
+3. unit testing expeirence?
+4. Explain the prototype chain?
+5. Explain how the closure might be useful?
+
+--------------------------------------------------------------------------------------------------------------
+
+nbc
+1. two controllers, how do you manage communcations of controllers
+2. What is the difference between service and factory
+
+--------------------------------------------------------------------------------------------------------------
+
+ondeck
+Cannot hear a thing, update the equiment or put it at the correct place!!!! The following the problems I guessed from the answers
+1. What is post method
+2. Security? Post and what? which is more secure and why?
+3. difference between == and ===?
+4. difference between Java and JavaScript
+5. JavaScript Inheritence
+6. Difference of angularjs and reactjs
+7. Callback functions, what is it?
+8. Use strict? why? How it affects the application
+9. Hoisting.
+10. Scopes in JavaScript
+11. About testing
+12. Ajax and about refresh the web page
+13. Why we need LESS?
+14. How to debug your code?
+15. What is RESTful web services
+16. What is the difference between RESTful and SOAP, why we use RESTful, why not use SOAP?
+
+--------------------------------------------------------------------------------------------------------------
+
+russina
+1. What kind of job do you want to do ????? really...
+2. Array of propertities, a property have a name, user ID,size, how do you handle deletion and addition to that? 
+3. what is the difference between the sas and scss?
+4. difference with factory, service and provider
+5. difference ng-route and ui-route
+
+--------------------------------------------------------------------------------------------------------------
+
+verizon
+1. website testing
+2. last project description
+3. jQuery animation
+4. update content of <li> element? html(), text(), val(),
+    how you get the element?
+5. any third party api you have used?
+6. how will you establish an ajax call? how would you process and catch the data 
+7. What type of thing you have to do to support cross browser compatibility
+8. difference between global variable and local variable
+9. How you ever use closure?
+10. javaScript you have worked on?
+11. origin function you have to do with array
+
+--------------------------------------------------------------------------------------------------------------
+
+Barkley一面
+1. Introduction
+2. what is backend technologies?
+3. What is the difference of the factory and service
+4. Did you use any third party libraries to create directive on top of it? Examples
+5. Events used 
+
+--------------------------------------------------------------------------------------------------------------
+Sparta System
+1. Let's say you have 5 ?? on the page, and you want to select all 5 of it.
+2. How to hide an element?
+3. What is the difference between double equal and thriple equal?
+4. New features in HTML5?
+5. Position properties in the css
+6. Difference between detech and remove?
+7. Difference between delegate, live, on, bind?
+
+--------------------------------------------------------------------------------------------------------------
+web designer
+1. Photoshops....really???
+2. Bootstrap any?
+3. Cross domain issue in the angularjs 
+4. What could you do let your angularjs application be searchable? Visable for search engines?
+5. What is closure in javascript?
+6. What is the Namespace? Why we use Namespace? Benifits?
+7. What is a scope in AngularJS?
+8. What service is in angularjs?
+9. Can you tell me what a directive is?
+
+--------------------------------------------------------------------------------------------------------------
+
+
+MS
+1. What would you first look at if your web site is not fast enough
+2. Tic Tac Toe
+3. Calendar Control
+--------------------------------------------------------------------------------------------------------------
+
+Visa
+1.introduce yourself and your project
+2.Why you use libraries and frameworks? Benefits of angular js , what problems angular js solve?
+3.how to achive MVC using core javascript?
+4. Any design pattern? Write example about your design pattern
+5.What is closure of javascript? Write example for using closure?
+6. How to solve cross browser compatibility?
+7.the difference between apply and call?
+8.What is the DOCTYPE in html 5?
+9.What is the meant by Semantic Markup?
+10.difference between Span and Block level element.
+11.Can you explain what are the performance techniques that you used to load the page faster?
+12.What is meant by Cascade in Css?
+13.Can you explain about Specificity?
+14.block vs float
+15.what is meant by Prototype in JS?
+16. how do achieve inheritance?
+17. what is meant by inheritance?
+
+
+--------------------------------------------------------------------------------------------------------------
+
+client
+1. How do you stay with the latest technologies?
+2. call and apply difference?
+3. map function
+4. What is the closure?
+5. Do you know agile?
+6. Project management tools? 
+7. Dialy workflow?
+
+--------------------------------------------------------------------------------------------------------------
+
+
+client
+1. What is the front end directive in angular
+2. angular services
+3. angularjs and backbone js difference
+4. What is the two-way-data binding
+5. What is the most complex problem have you solved in angularjs
+
+--------------------------------------------------------------------------------------------------------------
+
+hcl
+1.which framework you are most familiar with?
+2.have you used the attribute defer?
+3.difference between == and ===?
+4,how do you check an variable is an object
+5.what is javascript hoisting?
+6.how do you use closure?
+7.do you know strict mode in javascript？
+8.do you know how to use protype to achive javascript inheritance?
+9.what is controller in angular js?
+10.can you describe the directive in angular js?
+11.what is injector in angular js ?
+12.can you explain factory method?
+13.Does Angular use the jQuery library?
+14.What is ng-app, ng-init and ng-model?
+15.What is Data Binding in Angular JS?
+16.Give an Example of Data-Binding in AngularJS?
+17.What is Looping in AngularJs and Give an Example?
+18.How to Write Expression in AngularJS?
+19.How to initiate variable in AngularJS?
+20.difference between angular js string and object?
+21.where to use bootstrap?
+22.how many layouts in bootstrap?
+23.what is the difference betwwen float layout and static layout?
+24.what is relative layout?
+25.what function you can use to attach the badge?
+26.how do you classify bootstrap pagination?
+27.what is jumptron in bootstrap?
+28.what is bootstrap container in boostrap?
+29.what is media object?
+30.what is bootstrap well?
+31.what is the biggest chanllenge you use angular js ?
+32.have you used the ansychise call?
+33.have you handled security issue of angular js?
+34.how strong you use github?
+35.what IDE you use except eclipse?
+36.have you used indeligy?
+37.have you used maven bower?
+38.how do you do mification and debuging?
+39.how do you jasmine to do the junit test and UI testing how is the environment?karma?
+40.how about the function test?
+41.what is agile scrum?
+42.have you used JIRA?
+43.have you seen the dashboard in JIRA?
+44.who assigned the assignment to you and astimation?
+--------------------------------------------------------------------------------------------------------------
+
+HCL1
+1.what is single page application?
+2.what are angular js features?
+3.what is two-way databinding in angularjs?
+4.what is $scope in angular js?
+5.what is $compile in angularjs?
+6.how do you share the data between different controllers?
+7.the difference between factory and service?
+8.$rootscope?
+9.how do you use angularjs ajax call?
+10.have you used defer and promise in angular js ?
+11.an example of jasmine junit test?
+12.difference between html4 and html5?
+13.difference between cookie and local storage?
+14.how do you handle security of local storage?
+15.local storage and session storage?
+
+--------------------------------------------------------------------------------------------------------------
+hcl 2
+1. What are the features available in angularjs?
+2. two way data binding, one way data binding, do you know about that?
+3. What is the $scope in the angularjs?
+4. What is the disadvantages of the $scope? Always could be accessed from the parent scope
+5. what is $compile
+6. What is the difference of the service and the factory?
+7. How can you build the SPA
+8. Suppose I have a single controller and I want to load multiple directive into the controller without routing, how can you do it?
+9. How do you access ajax call
+10. what is deffer and promise in angular
+11. What is prototype
+12. Inheritence
+13. Jasmine in Angularjs
+14. Differences between html4 and html5
+15. What will you validate the form???? form validation
+16. local storage?
+--------------------------------------------------------------------------------------------------------------
+
+lendingclub
+Round1:
+HTML part:
+1.can you tell me the difference between <span> and <div>?
+2.how to create a numbered list in the html?
+3.what is good point and bad point of table element in html
+4.will you recommend table to do the page layout? Accordion
+5.when you make a html document, require tags what is the main 3 tags?
+  <html><body><head>
+CSS part:
+1.what is difference between class and id?
+2.what is grid system of bootstrap?
+3.how to center an element in the web page?
+First you should define a width, the use the css margin:o auto;
+4.three ways to put your css style file?
+5. !important in CSS
+javascript part
+1.how to add event to id , class element?
+Document.getElementByid();
+Document.getElementByclassname();
+2.two different ways to access property of javascript object?
+using the dot notation or the bracket notation.
+object.property
+object["property"]
+3.Why it is bad to put javascript in the html file?
+4.what is closure?
+--------------------------------------------------------------------------------------------------------------
+Round 2:
+1.The benefit of angularjs , why you choose that?
+2.how to deal with angular js in the large team?
+3.how to deal with multiple Ajax call in Angularjs?
+4.the benefit and performance of proxy design pattern?
+5.your experience of javascript closure?
+6.which single project you are most proud of?
+7.Your experience of SASS?
+8.biggest challenge unit testing in javascript?
+9.how to maintain your test code and develop code?
+
+--------------------------------------------------------------------------------------------------------------
+FIS:
+1.what are you doing? what have you done?
+2.have you used selenium or other test framework like protractor?
+3.how comfortable are you feel with the front end ?
+4.have you tried other framework? like backbone react?
+5.how do you rate yourself?like core javascript
+6.how much css experience do you have?
+7.how much css3 do you make?like the animation or translate?
+8.if I have an array, how to tranverse the array?
+9.what is the difference between map and forEach?
+10.If I have an array [1,2,3], if I want to make a new array, to [3,5,7], how to do that?
+11.the difference between apply and call?
+12.are you familiar with bind? are you familiar with core javascript bind?
+13.are you familiar with with the box model?
+14.what version control tool do you use?
+15.how you do debuging in javascript?
+16.when I put an URL in the address bar? what happens?can you give the whole detail of the process?
+   how the browser render it? how do they render the whole thing?
+   when they go to the head tag, they will get the style sheet? how do they deal with the external style sheet?
+17.once they have the mark up, do they make a request first and continue after the request received, are the pieces 	
+   asynchronous or synchronous?
+18.how do you keep up with the web changes?
+19.how do you deal with the discussion of the unagreement with the developers?
+
+--------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

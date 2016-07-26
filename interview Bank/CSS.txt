@@ -1,0 +1,131 @@
+1. Margin:
+    margin: top right bottom left (margin: 25px 50px 75px 100px;)
+    margin: top right_and_left bottom( margin: 25px 50px 75px;)
+    margin: top_bottom right_left (margin: 25px 50px;)
+    margin: top_bottom_right_left (margin: 25px;)
+    
+    margin: 0 auto (0 for top and bottom margin, and left and right margin should be equal)
+    
+2. Position property:
+    static: default value. Elements render in order, as they appear in the document flow. Not effected  by the top, bottom, left, right and z-index properties.
+    
+    relative: relative behaves the same as static unless you add some extra properties. Set the top, right, bottom and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+    
+    fixed: positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used.
+    
+    absolute: it behaves like fixed except relative to the nearest positioned ancestor instead of relative to the viewport. If an absolutely positioned element has no positioned ancestors, it uses the document body, and still moves along with page scrolling. Absolute positioned elements are removed from the normal flow, which means it can be overlapped by other elements.
+    
+    sticky: a hybrid of relative and fixed positioning. The element is treated as relative positioned until it crosses a specified threshold, at which point it is treated as fixed positioned. 
+    eg. #sample{position: sticky; top: 10px;}
+    The sample element will behave just like a relatively positioned element until the viewport scrolls such that the element would be less than 10px from the top. Then. it will be fixed to 10px from the top until the view port is scrolled back past this threshold.
+    
+3. Float:
+    The elements after the floating element will flow around it. The elements before the floating element will not be affected. If a image is floated to the right, a following text flows around it, to the left.
+    
+4. Avoid visual differences in different browsers
+    Reset the body margin and padding at the very first of the css style sheet:
+    *{margin:0; padding:0}
+    
+5. Combinators in CSS3:
+    Combinator: explains the relationship between the selectors.
+    Descendant selector: matches all elements that are descendants of a specified element.
+        div p{ color:black;} (All p in the div)
+    Child selector: selects all elements that are the immediate children of a specified element.
+        div > p{...}
+    Adjacent sibling selector: selects all elements that are the adjacent siblings of a element. Adjacent means the immediately following.
+        div + p{...}
+    General sibling selector: selects all elements that are siblings of a specified element.
+        div ~ p{...}
+        
+6. Pseudo-class
+    Used to define a special state of an element. eg. a:hover{...} means do the set when hover over the link.
+    
+7. Pseudo-element
+    Used to style specified parts of an element. eg. p::first-letter{...}
+    p::after, insert after the content of each <p> element
+    p::before, insert before the content of each<p> element
+    p::first-letter, selects the first letter of each <p> element
+    p::first-line, selects the first line of each <p> elemtn
+    p::selection, selects the portion of an element that is selected by a user
+    
+8. Text-align
+    Justify, each line is stretched so that every line has equal width, and the left and right margins are straight.
+    
+9. Box model
+    margin,border,padding,content
+
+10. Box-sizing
+    content-box:default. The width and height properties includes only the content.
+    border-box:the width and height properties includes content, padding and border.
+    
+11. IE, firefox render the box model 
+    Firefox and other standards compliant browsers will add the size of the padding to the width or height of the box, while IE will place the padding inside of the box without adjusting the width or height.
+    Solution: Place one element inside of a container, where container does not have any padding but has a width defined, and the inside element does have padding defined
+
+12. CSS Specificity:
+    Specificity means a browser decides which property values are the most relevant to an element and gets to be applied. CSS styles follow an order of specificity. It specifies when styles override another or take precedence.
+    (1). Inline css is higher than <style> tag
+    (2). <style> tag is higher than css introduced by the <link> tag
+    (3). Id selector is higher than class and then higher than tag name
+    (4). Tow color properties in the same curly brakets, the later one will override the previous one.
+    (5). You can use "!important" statement to make the highest priority specificity.
+    (6). Inherited css has the lowest priority.(Inherited property uses the property value from its parent property)
+    
+13. CSS reset:
+    A CSS Reset is a short, compressed set of CSS rules that resets the styling of all HTML elements to a consist baseline. Using a CSS RESET, css authors can force every browser to have all its styles reset to null, thus avoiding cross-browser differences as much as possible.
+    
+14. CSS Performances:
+    repaint: it occurs when changes are made to an element skin that changes visibility, but do not affect its layout.(eg. outline, visibility, background color)
+    
+    reflow: it involves changes that affect the layout of a portion of the page. It is expensive and will slow the performance because most of the time it means to re-render the whole page. Resize window, change font, add or remove a stylesheet, content changes, activation of CSS pseudo classes and many more will cause the reflow.
+
+15. Flex
+    It specifies the length of the item, relative to the rest of the flexible tiems inside the same container. The flex property is a shorthand for the flex-grow, flex-shrink, and flex-basis properties. If the element is not a flexible item, the flex property has no effect.(display:flex)
+    
+16. Background image size:
+    Before CSS3, the size was determined by the actual size of the image. In CSS3, it is possible to specify the size of the background image, which allows us to reuse background images in different contexts.
+    
+17. CSS3 web fonts:the @font-face rule
+    Web fonts allow developers to use fonts that are not installed on the user's computer. When you have found/bought the font you wich to use, just include the font file on your web server, and it will be automatically downloaded to the user when needed.
+    @font-face {font-family: myFirstFont; src: url(sansation_light.woff);}
+    div{font-family: myFirstFont;}
+    
+18. @import:
+    The @import CSS at-rule allows to import style rules from other style sheets
+    eg. @import url;
+        @import url list-of-media-queries;
+    The @import can make your css code clearer, however, it slows down your application spped because it causes files to load sequentially instead of in parallel. This wastes times and round trips and makes your web page load slower. You can use a stylesheet link to avoid the @import
+
+19. Image Sprites
+    It is a collection of images put into a single image.
+    An web page with many images can take a long time to load and generates multiple server requests. With image sprites, it will reduce the number of server requests and save badnwidth. And you can use the width, height and other properties to choose a part of the combined image to form the needed image.
+    
+20. Optimize css:
+    (1). No more than one external CSS stylesheet
+    (2). Inline small CSS into HTML using style tags for above the fold content
+    (3). No @IMPORT CALLS FOR CSS
+
+21. CSS3 @media query
+    With a @media query, you can write different CSS code for different media types to make your webpage responsive.
+
+22. Use CSS to hide HTML element:
+    (1). visibility: hidden
+    (2). opacity: 0
+    (3). display:none
+    (4). position:absolute, then adjust the top, left, bottom, right properties
+    
+23. CSS overflow:
+    It specifies what happens if content overlfows an element's box:
+    visiable, hidden, scroll, auto, initial, inherit
+    
+24. What is meant by cascade in CSS
+    The cascade is a fundamental feature of CSS. It is an algorithm defining how to combine properties values originating from different sources. It defines the order of precedence for how conflicting styles should be applied
+
+
+
+
+
+
+
+
+    

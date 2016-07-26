@@ -1,0 +1,294 @@
+1. Difference between == and ===
+    ==: compare value
+    ===: compare value and type
+    
+2. Speed up web: minificaiton, less downloading, ajax, css in the front, javascript on the end,
+
+3. Difference between JavaScript Framework and Library
+    Library like jQuery gives us a neat toolkit to help with implementing some functions.
+    Frameworks provides us with an entire project architecture to follow in order to build a well structured javascript project.
+    
+    
+4. Json and Jsonp difference
+
+5. What is an anonymous fuction
+    An anonymous function is a function that was declared without any named identifier to refer to it. As such, an anonymous function is usually not accessible after its intial creation. The most commom use for anonymous functions are as arguments  to other functions, or as a closure.
+    
+6. what is the type of variable without a value: undefined
+
+7. Set a variable to empty: set it as null
+
+8. How to define and call a function within an object?
+    An objct method is a function definition, stored as a property value
+    
+9. What is JavaScript Scope?
+    In JavaScript, scope is the set of variables, objects, and functions you have access to. 
+    local scope: can only be accessed within the function
+    global scope: all scripts and functions on web page can access it
+    
+10. The lifetime of JavaScript variables
+    Starts when the variable declared
+    Local variable ends when the function is completed.
+    Global variables are deleted when you close the page.
+    
+11. What is Colusure
+    A "closure" is an expression (typically a function) that can have free variables together with an environment that binds those variables (that "closes" the expression).
+    Private variables can be made possible with closures. The nested function can access the variable in the parent scope. This is called a JavaScript closure. It makes it possible for a function to have private variables.
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+
+12. What is HTML DOM?
+    HTML DOM is standard for how to get, change, add, or delete HTML elements. With the HTML DOM, javascript can access and interact with all the elements of an HTML document.
+    
+13. addEventListener() method:
+    It attaches an event handler to the specified element. It can assign different function to a specified element.
+    
+14. What is XMLHttpRequest object used for?
+    It exchanges data with a server behind the scenes.
+    You can update a web page without reloading the page, request data from a serer after the page has loaded, receive data from a server after the page has loaded, send data to a server in the background.
+
+15. Difference of settimeout and setinterval
+    Settimeout calls a function or evaluates an expression after a specified number of milliseconds.
+    SetInterval calls a function or evaluates an expression at time intervals in milliseconds. and will continue calling the function until clearInterval is called, or the window is closed.
+    
+16. Difference between overloading and overriding
+    Overloading deals with the notion of having two or more methods in the same class with the same name but different arguments.
+    Overriding means having two methods with the same argument, but different implementation. One of them would exist in the Parent class while another will be the derived class.
+    
+17. Explain this keyword
+    In JavaScript, this will always refer to the owner of the funciton we are executing or as an object method
+    
+18. What are browser detection and feature detection
+    Browser detection and feature detection are two most common ways to test whether the technologies you use in your application can apply to the current browser or not. Browser detection mainly check to match the browser type strings, while the feature detections are consist of small scripts to test whether the feature you need is supported by the current browser or not(this is not about the version or the browser type)
+    Browser Detection:
+    It is one approach to cover browser differences. The most common approach is to use JavaScript to query the user-agent header:
+    <script type="text/javascript">
+        if(navigator.userAgnet.indexof("MSIE")>0){
+            //run custom code for internet explorer
+        }
+    </script>
+    
+    Usually use it when dealing with the legacy applications.
+    Disadvantages:
+    (1). Should track which features the browser supports in detail, one wrong assumption could break the site.
+    (2). Does not consider the version of the browser, it is not future-proof. 
+    
+    Feature Detection:
+    Better approach to handle differences in web browsers in web pages
+    Before using a feature that you know has different implementations in the various browsers, you can run a small set of tests where you look for the availability of a specific object, method, property, or behavior.
+    
+    In most cases, this can be done by trying to create a new instance of the feature in question. If that instantiation returns something other than null, then executing browser knows the feature. If not, you can test to tsee if there's a workaround or propritary legacy implementation of the feature available.
+    
+    Two important recommendations for feature detection:
+    (1). test for standards, as a browser often supports the newer standard as well as the legacy work around
+    (2). only target related features in a single check , to minimize assumptions about a browser's capability
+    
+    
+19. JS frameworks: angularjs knockout.js node.js backbone
+
+20. Difference between apply and call
+    Apply lets you invoke the function with arguments as an array, call requires the parameters be listed explicitly.
+    Why should we use apply or call? Sometimes we want to borrow some functions from other object, we can use the function and call it with arguments from our own properties.
+    
+21. Singleton: 
+    It limits the number of instances of a particular object to just one. It is implemented as an immediate anonymous function, the Module pattern is JavaScript's manifestation of it. Ensure all object access the single instance
+    
+    var Singleton = (function(){
+        var instance;
+        
+        function createInstance(){
+            var object = new Object("I am instance");
+            return object;
+        };
+        
+        return { getInstance: function(){
+            if(!instance){
+                instance = createInstance();
+            }
+            return instance;
+        }};
+    })();
+
+22. How to catch unhandled JavaScript errors?
+    Assign the window.onerror event to event handler.
+    <img src="image.gif" onerror="myFunction()>
+    
+    <script>
+        function myFunction(){
+            alert('The image could not be loaded.');
+        }
+    </script>
+    
+23. When does the window.onerror event fire?
+    In a nutshell, the event is raised when either:
+    1) there is an uncaught exception
+    2) a compile time error occurs
+    Uncaught exceptions:
+    throw some messages, call something undefined, security exception, compile error
+    
+24. What is immediate function
+    Immediate functions execute as soon as JavaScript encounters them. Creating an immediate function: add the open/close parentheses after the closing curly bracket, and then wrap the entire function in parenthese.
+    Self invoke function
+    
+25. Strict Mode?
+    strict mode delete some JavaScript silent errors by changing them to throw erros.
+    strict mode code can sometimes be made to run fast than identical code that is not strict mode.
+    strict mode is declared by adding "use strict;" to the beginning of the JS file or JS function.
+    declared at the beginning of a JS file, it has glogbal scope, declared in a function it has local scope.
+    
+26. How to reload page with JavaScript
+    location.reload(forceGet);
+    forceGet: true-page must reloaded from the server; false(default)-page reloaded from the cache
+    
+27. Minification
+    In JS, it means removing all unnecessary characters, such as spaces, new lines, comments without affecting the functionality of the source code.
+    
+28. document.write()
+    The write method writes HTML expressions or JS code to a document.
+    
+29. What is event bubbling and capturing?Difference?Which one is better or faster
+    Two ways of event propagation in the HTML DOM, bubbling and capturing
+    Event propagation is a way of defining the element order when an event occurs. If you have a <p> element inside a <div>, the user clicks on <p>, which element's click event should be handled first? In bubbling the innermost element's event is handled first and then the outer; In capturing, the outermost element's event is handled first and then the inner.
+    With the addEventListener method you can specify the propagation type by using the useCapture parameter:
+    addEventListener(event,function,useCapture);
+    The default value is babbling, when the useCapture is set to true, the event uses the capturing propagation. Only event bubbling model is supported by all the major browsers.
+    
+30. JavaScript Hoisting
+    In JS, a variable can be declared after it has been used. JS initialization are not hoisted. It is better to declare the variables on the top.
+    
+31. Namespace
+    It is used for grouping the desired functions, variables, under a unique name. It is a name that has been attached to the desired functions, objects and properties. This improves modularity in the coding and enables code reuse.
+    In JavaScript a namespace is just another object containing methods, properties and objects.
+    JS has a big design flaw, where it is very easy to create global variables that have the potential to interact in negative ways. The practice of namespacing is usually to create an object literal encapsulating your own functions and variables, so as not to collide with those created by other libraries:
+    var MyApplication = {
+        var1: val1,
+        myfun: function(){
+        
+        },
+        ...
+    };
+   Instead of calling myfun() globally, it would always be called as: MyApplication.myfun(). It is then less likely for our method or function to collide with other libraries.
+   
+32. Prototype in JS
+    Every JS object has a prototype. The prototype is also an object. The prototype property allows you to add new properties and methods to existing object. All JavaScript objects inherit their properties and methods from their prototype called Object.prototype. The standard way of creating a prototype is through the constructor function.
+    In JavaScript you first create an object, then you can add objects or create new objects from it.
+    Example:
+    //Define a functional object to hold persons in Js
+    var Person = function(name){
+        this.name = name;
+    };
+    
+    //Add dynamically to the already defined object a new getter
+    Person.prototype.getName = function(){
+        return this.name;
+    }
+    
+    //Create a new object of type Person
+    var john = new Person("John");
+    
+    alert(john.getName());
+    
+    //If now I modify Person object, also john gets the updates
+    Person.prototype.sayMyName = function(){
+        alert('Hello, my name is '+ this.getName());
+    }
+    
+    john.sayMyName();
+
+33. Optimize JavaScript code:
+    1. Use local function variables instead of global variables
+        Global variables lives in a highly-populated namespace, browser must distinguish between global variables and properties of objects that are in the current context
+    2. Avoid adding short strings to long strings
+        It needs to duplicate the long string
+    3. Avoid pitfalls with closures
+        Colusres are a powerful and useful feature of JavaScript, however, they have several drawbacks, including:
+        they are the most common source of memory leaks; creating a closure is significatly slower than creating an inner function without a closure, and much slower than reusing a static function.
+    4. Use hoisting carefully
+    
+34. JS testing:
+    Unit testing: a software testing method by which individual part of source code get tested.
+    
+    End to end testing: test whether the flow of an application from start to finish is behaving as expected, the 
+    purpose of performing it is to identify system dependencies and to ensure that the data integrity is maintained between various systems componenets and systems.
+    
+    The entire application is tested for critical functionalities such as communication with the other systems, interfaces, database, network and other applications.
+    
+    Jasmine is a behavior-driven development framework for testing JS code. It does not depend on any other JS frameworks. It does not require a DOM, it has a clean, obvious syntax so that you can easily write tests.
+    
+    A test suite begins with a call to the global Jasime function named describe with two parameters: a string and a function. The string is a name or title for a spec suite. The function is a block of code that implements the suite.
+    
+35. What are JavaScript types:
+    Number, string, boolean, function, object, null, undefined
+    
+36. What is the use of isNaN function
+    it returns true if the argument is not a number, otherwise false.
+    
+37. Explain how can you submit a form using JavaScript
+    document.form[0].submit();
+    
+38. Disable the enter key on HTML form:
+    $(document).keypress(
+        function(event){
+            if(event.which == '13') {
+                event.preventDefault();
+            }
+    });
+    //or this way
+    $('input').on('keydown', function(event) {
+       var x = event.which;
+       if (x === 13) {
+           event.preventDefault();
+       }
+    });
+
+39. Type of null and type of undefined:
+    undefined means the variable has been decalred, but no value has been assigned to the variable
+    null means the variable has been assigned a value as a representation of no value
+    
+40. Use a object literal:
+    A easy way to create JS object, you both define and create an object in one statment.
+    An object literal is a list of name: valule pairs inside curly braces.
+    
+    use the new keyword:
+    var person = new Object();
+    person.firstname = "John";
+    
+    use an object constructor
+    If a object type is needed, the standard way to create it is to use an object constructor function:
+    function person(first, last){
+        this.first = first;
+        this.last = last;
+    }
+    var girl = new person("a","b");
+    
+41. Inheritence in JavaScript
+    JavaScript is a class-free, oo language, so it uses prototypal inheritance insted of classsical inheritance. Inheritance helps us better organize our code and reuse some code. Basically, there are three types of Inheritence in JS:
+    1). Pseudoclassical pattern
+        It tries to point a child's prototype to a parent's prototype.
+        child.prototype = parent.prototype;
+    2). Function pattern
+        It allows one object to inherit from another, take the result and augment it at the child level to achieve inheritance.
+        function Human(){...return human}
+        var david = Human();
+        There is no need for us to use new keyword, constructors, it just directly passes you the parent object. It has downside for performance because each object is unique, meaning each function call creates a new object, so the javascript interpreter has to assign new memory to thte function in order tot recompile everthing inside of it as unique again.
+    3). Prototypal pattern
+        It directly clones
+        var male = Object.create(human);
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<ul id="test">
+	<li>index = 0</li>
+	<li>index = 1</li>
+	<li>index = 2</li>
+	<li>index = 3</li>
+</ul>
+	<script type="text/javascript">
+var nodes = document.getElementsByTagName("li");
+console.log(nodes);
+for (i = 0; i < nodes.length; i++) {
+	nodes[i].onclick = (function(index){
+		return function(){
+		console.log(index+ 1);
+	}
+	})(i);
+}
+</script>
+</body>
+</html>

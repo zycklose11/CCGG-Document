@@ -1,0 +1,187 @@
+1. Why use AngularJS
+    1). It uses MVC to let you split app into MVC components, and the framework will execute your functions when needed, which means you will do much less work on the structure of the application
+    2). It offers two way data binding, and dependency injection
+    3). Easy to build up SPA
+    4). Use POJO(Plain old JavaScript Object), does not need getters and setters, which makes your code much cleaner.
+    5). Directives in AngularJS make it easier to add additional functionality into the HTML
+    
+2. Difference between AngularJS and JQuery
+    jQuery is more like a javascript library, which is a tool for developers to manipulate and control DOM elements.
+    AngularJS is a JavaScript framework which has its own way of implementing things and rules. It asks you to follow the MVC pattern to split your code and it will call your functions when needed. It is more suitable for develope the web application. Definitely, you can use jQuery inside AngularJS, however, in order to keep the application code clean, you should add your jQuery code inside your angular directives instead of controllers.
+    
+3. Scope
+    Every controller has an associated $scope object. Scope is the glue to connect the View and controller. 
+    
+    scope vs this:
+    variables in scope can be used by its child, which means it supports inheritance.
+    variables in this cannot be used by other controllers, which means all the properties in this are parallel to other controllers.
+
+4. Custom Directive:
+    angular.module("MyApp").directive("MyDirective",,function(){
+        return {
+            restrict: E, (E--element, A--attribute, C--class, they can be combined as needed, eg. AEC)
+            scope: {title:'@' }
+            link: function(){
+                //manipulate the DOM
+            },
+            templateUrl: ...,
+            template:'<div>{{value}}</div>',
+            replace: true,
+        };
+    });
+    
+    Three kinds of scope in the directive can be set:
+    Shared scope: the directive works with the same scope that is already available for the DOM node where the directive appear(default scope, scope=false). It shares the scope with the enclosed controller, not create a new one.
+    Inherited scope: scope=true, the directive inherits the scope of the controller. A new scope is created instead of using the parent scope.
+    Isolated scope:if you want to set an isolated directive scope, just use scope: {} will be fine.There are 3 options to interact with the outside in the isolated directives--local scope properties:
+    1) @: it is used to access string values that are defined outside the directive. Just as the example, which means if the controller set up a variable in scope as 'title', then the directive will have access to the title variable.
+    2) =: In cases where you need to create a two-way data binding between the outer scope and the directive's isolate scope, you can use the '=' character. scope:{customer:'='}
+    3) &: It allows the consumer of a directive to pass in a function that the directive can invoke.
+    
+    replace:true
+    replace the current element with the contents of the HTML. The replacement process migrates all of the attributes / classes from the old element to the new one.
+    
+5. Data Binding:
+    It is the synchronization between the model and the view. When data in the model changes, the view reflects the change, and vise versa.
+    
+6. Control oriented vs. Data oriented (Two programming style)
+    Control oriented: put data in and extract data out through controls, typically makes your code complex, hard to maintain when the controls grows larger.
+    data oriented: when user modifies the data, the property automatically update. A lot of unnecessary code could be eliminated with data-oriented frameworks.
+    
+7. ng-disabled vs. html disabled
+    html disabled is a boolean attribute for the element and it is not binded with other models in the JS code, however the ng-disabled could be binded with boolean variables or experssions in the AngularJS code to control the element dynamically.
+    
+8. Route: 
+    It defines the route associate controller with view to load different views to our angularjs application page. It is the key component to the make the Single Page Application.
+    angular.model("MyApp",["ngRoute"]).config(function($routeProvider){
+        $routeProvider
+            .when('/',  
+                {
+                    templateUrl:"firstPage.html",
+                    controller:"firstController"
+                })
+            .when('/home',
+                {
+                    templateUrl:"homePage.html",
+                    controller:"homneController"
+                })
+            .otherwise(
+                {redirectTo: '/'}
+            );
+    });
+    
+    you can also use the $routeParam service to retrieve the current set of route parameters, pass some data between different controllers.
+    
+9. controller
+    It is a brain for a view: interact with view with $scope, defines properties, functions, knows how to retrieve data from factory or services.
+    Do not use Controller to:
+    1) Manipulate DOM: Controllers should contain only the business logic
+    2) Format input: Use angular form controls instead
+    3) Share code or state across controllers: Use service instead
+    
+10. Service, provider, factory
+    Controller should be thin, all your business logic code should write in the service, provider or factory in angular application.
+    Factory: when using a Factory, you create an object, add properties to it, then return that same object. When you pass this service into your controller, those propertieis on the object will now be available in that controller through your factory.
+    
+    Service: When you are using a Service, it's instantiated with the new keyword. Because of that, you will add properties to this and the service will return this. When you pass the service into your controller, those properties on this will now be available on that controller through your service. 
+    
+    Providers: they are the only services you can pass into your .config() function. Use a provider when you want to provide module-wide configuration for your service object before making it available. The only properties or methods that will be available in your controller are those properties or methods which are returned from the $get() function.
+    
+    See details at: http://tylermcginnis.com/angularjs-factory-vs-service-vs-provider/
+    
+11. Value and Constant
+    Constant can be injected anywhere, the value of a constant should never be changed.
+    Value differs from constant in that value can not be injected into configurations, it can be changed by reassign.
+    
+12. $http
+    Use the $http Service: $http.get("api");
+    
+13. $watch, $digest, $apply
+    $watches can be used to watch any value, and trigger a function call when that value changes. A $watch can be set up from any $scope by calling $scope.$watch(watchExpression,listener,[objectEquality]). When you create a data binding from somewhere in your view to a variable on the $scope object, AngularJS creates a "watch" internally. A watch means that AngularJS watches changes in the variable on the $scope object.
+    The listener callback to be executed whenever the watchExpression changes. WatchExpression could be a value or a function that returns a value, and those value will be watched.
+    $scope.$watch(
+        function(scope){scope.name;},
+        function(newValue, oldValue){
+            document.getElementById("").innerHTML = ""+newValue;
+        });
+    Note that use "scope" without the $ in the watch function
+    
+    $digest, this function iterates through all watches and checks if any of the watched variables have
+    changed. If a watched variable has changed, a corresponding listener function is called. The listener
+    function does whatever work it needs to do, for instance changing a HTML text to reflect the new value of the watched variable. Thus, the $digest() function is what triggers the data binding to update. Most of the times, AngularJS calls it for you, in some corner cases, you may need to call $scope.$digest() yourself if you find some elements do not update.
+    
+    $apply function is used to execute some code, and then call $scope.digest() after that, so all watches are checked and the corresponding watch listener functions are called. The apply() function is useful when integarting AngularJS with other code.
+    
+14. $templateCache
+    The first time a template is used, it is loaded in the template cache for quick retrieval. You can load templates directly into the cache in a script tag, or by consuming the $templateCache serice directly.
+    
+15. MVVM && MVP
+    MVVM-- controller replaced by view model. This view model sits below the UI layer, it exposes the data and command objects that the view needs.
+    MVP-- controller replaced by presneter.  The presenter sits at the same level as the view. It listens to the events of both the view and the model and mediates the interactions between both view and model.
+    
+    adv MVVM vs MVC
+    1). Enable saparation of the Model and View
+    2). support for automatic two-way databinding
+    
+16. RootScope
+    Each angular application has exactly one rootscope. It can access all the child scopes. It is the only place where the department property is defined.
+    
+17. compile() and link() functions:
+    compile: use for template DOM manipulation, hence manipulations that apply to all DOM clones of the template associated with the directive.
+    link: use for registering DOM listeners as well as instance DOM manipulation.
+    
+18. ng-class:
+    The ngClass directive allows you to dynamically set CSS classes on an HTML element by data binding an expression that represents all classes to be added.
+
+19. Security:
+    A cross-site scripting (XSS) refers to client-side code injection attack.
+    
+20. Cross-site request forgery(CSRF)
+    A Cross-site request forgery is that a malicious site can cause a visitor's browser to make a request to your server that causes a change on the server.
+    
+21. Prevent CSRF
+    Make sure form submissions that cause server side changes use your own forms
+    1) check the referrer header.
+    2) Include a hidden field in the form and check its value when the form is submitted.
+    
+22. $scope and scope:
+    They all refer to a scope. $scope is glue between controller and view, it is used to propagate date from controller to the view. $scope uses dependency injection, all these things that passed to a controller or service, are depend on the providers that are available to application. scope: angularJS just calling a method with scope object as parameters which already provided, the order of these prarmeters (scope, element, attribute) in functions is important.
+    
+23. $resource
+    With resource object, we can interact with RESTful server-side data sources. It requires the ngResource module to be installed. $resource(url,[paramDefaults],[actions],options)
+
+24. 3 kinds of Dependency Injection
+    1).inline Array Annotation
+    someModule.controller('MyController', ['$scope', 'greeter', function($scope, greeter){}]); 
+    2).$inject property Annotation
+    var MyController = function($scope, greeter) { 
+      // ... 
+    } 
+    MyController.$inject = ['$scope', 'greeter']; 
+    someModule.controller('MyController', MyController);
+    3).implicit Annotation(Minification will rename it and may break the app)
+    someModule.controller('MyController', function($scope, greeter) { 
+      // ... 
+    });
+    If you do not want minification to break your app, use ng-annotate in ng-strict-di
+    ng-strict-di: <html ng-app="myApp" ng-strict-di> 
+    It throws an error whenever a service tries to use implicit annotations.
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

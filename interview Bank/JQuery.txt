@@ -1,0 +1,189 @@
+1. even.stopPropagation() 
+    This method stops the bubbling of an event to parent elements, preventing any parent event handlers from being executed. It stops the event from bubbling up the event chain.
+    
+2. How to reload part of page with JQuery
+    Use the load() method, it allows us to specify a portion of the remote ducement to be inserted
+    $("#result").load("test.html #container");
+    It finds the html file and get the element which ID is container to insert into the element with ID equals to result on current page.
+    
+3. Handle different types of JQuery Ajax responds
+    Change the value of datatype(xml, json,html,script,text);
+    
+4. Advantages of JQuery
+    Ease of use: it is easier for developers to use compare with the standard javascript library. Apart from simple syntax, it also achieve the same feature in comparison.
+    Ajax support: Ajax enables a sleeker interface where actions can be performed on pages without requiring the entire page to be reloaded. 
+    
+5. Ready event & onload event?
+    onload: window.onload ; Ready: $(document).ready()
+    The ready event occurs after the HTML document has been loaded, while the onload event occurs later, when all content also has been loaded
+    The onload event is a standard event in the DOM, while the ready event is specific to JQuery. The purpose of the ready event is that it should occur as early as possible after the document has loaded, so that code that adds functionality to the elements in the page does not have to wait for all content to load.
+    
+6. JQuery Plug-in
+    A JQuery plug-in is piece of code written in a standard JavaScript file, is simply a new method that we use to extend JQuery prototype object, simplify the JQuery programming.
+    
+7. Why callbacks in JS
+    A callback function is executed after the current effect is finished.
+    It can be used to bind functions with some event handler
+    
+8. Methods to set content of the html element
+    text(): Sets or returns the text content of selected elements
+    html(): Sets or returns the content of selected elements(includes the html tags)
+    val(): Sets or returns the value of selected element(form fields)
+    attr(): get or set the element attribute values
+    
+9. Prop() and attr()
+    prop will be preferred, attr will work.
+    The value from the prop and attr could be different because of they are initialized differently. prop method deal with JS object property, so it could be an array, an object or any other type. attr method operates the DOM element property, it only deals with the string type.
+
+10. chaining
+    It allows us to run multiple JQuery methods on the same element within a single statement.
+    
+11. Eq() and get()
+    Eq(): It returns an jQuery object with a specific index number of the selected elements.
+    $(selector).eq(index)
+    
+    Get(): It gets the DOM elements specified by the selector.
+    $(selector).get(index)
+    
+12. How to make synchronous call
+    First you need to know, What is synchronous call and asynchronous call. Synchronous call means that the thread that initiated the operation will wait for the task to finish before it continues. In AJAX, this means when you send out a request you ask the browser to wait until it gets the result from the server. Asynchronous call means that it will not wait, which means you are still able to interact with the page when you send out the call. We should know that, make the synchronous call is not always the only option for you.
+    
+    async Boolean default is true
+    By default, all requests are sent asynchronously. If you need synchronous requests, set this options to false
+    
+13. JQuery UI
+    It is a set of user interface interactions, effects, widgets and themes built on top of the jQuery JavaScript Library. Whether you are building highly intercative web applications or you just need to add a date picker to a form control.
+    interactions: draggable, droppable, resizeble, selectable, sortable
+    
+14. remove HTMl elements or content
+    empty(): removes all the child element of the matched element while remove() method removes set of matched elements from DOM
+    remove(): takes elements out of the DOM. Use remove method when you want to remove the element itself, as well as everything inside it. In addition to the elements themselves, all bound events and jQuery data associated with the elements are removed.
+    detach(): same as remove() except that it keeps all jQuery data associated with the removed elements, it is useful when removed elements are to be reinserted into the DOM later.
+    
+15. siblings
+    siblings() method allows us to return all sibling elements of the selected element.
+    
+16. bind(), live(), delegate() vs. on()
+    The bind() method(data binding in jquery) attaches one or more event handlers for selected elements, and specifies a function to run when the event occurs. It tries to find every matched element in the document and attach the event handler to it. It is the most direct way to bind a event handler. However, it will slow down the speed of the application since it is expensive to bind the event handler with an element in the document. Also, bind does not work for elements added dynamically that matches the same selector.
+    
+    The delegate() method attaches one or more event handlers for specified elements that are children of selected elements, and specifies a function to run when then events occur. It attaches the event handler to the selector you can choose instead of directly attach to the document. Whenever an event bulbs up to the selector, it checks the event type and the css selector and only execute the event handler when both requirements are satisfied. It supports chaining.
+    
+    THe live() method attaches one or more event handlers for selected elements, and specifies a function to run when the events occur. It actually attaches the event handler to the root, which is the document. When a event bulbs up to the document, it checks whether it matches the event and the selector, only when both are true, shall the event handler function be executed. It is slower than use delegate().
+    
+    The on() method attaches one or more event handlers for the selected elements and child elements.
+    The idea for adding .on() was to create an unified event API, rather than having multiple functions for binding event. Is still supports all the goodness from the delegate() method.
+    
+17. animate()
+    It performs a custom animation on the selected elements.
+    $(selector).animate({params},speed,callback)
+    params defins the CSS properties to be animated.
+    speed specifies the duration of the effect. It can take the "slow", "fast", or milliseconds.
+    callback is the function to be executed after the animation is done.
+    
+18. How to add elements/content
+    .Append() method inserts content at the end of selected elements
+    .prepend() method inserts specified content at the beginning of the selected elements.
+    To add a item at a specific position, before or after an element:
+    $(selector).after("YOUR HTML CONTENT");
+    
+19. Clone()
+    It makes a copy of selected elements, add it anywhere you want.
+    
+20. Parents()
+    It returns all ancestor elements of the selected element.
+    
+21. find()
+    It returns descendant elements of the selected element, filter by the selector.
+    $("ul").find("span").css(...);
+    
+22. each() method executes a function for each matched element
+    $("button").click(function(){
+        $("li").each(function(){
+            alert($(this).text());
+        })
+    })
+
+23. offset(): Set or return the offset coordinates for selected elements(relative to the document)
+    $(this).offset().left; 
+    $(this).offset().top;
+    
+24. The param() method creates a serialized representation of an array or an object. The serialized values can be used in the URL query string when making an AJAX request.
+    Obj = new Object();
+    Obj.firstname = "Jon";
+    Obj.lastname = "Snow";
+    $.param(Obj);
+    // will print out "firstname=Jon&lastname=Snow"
+    
+25. The $.holdReady() method allows the caller to delay jQuery's ready event.
+    Example:
+    $.holdReady(true);// Delay the ready to get the script
+    $.getScript("myPlugin.js",function(){
+        $.holdRead(false);// release to execute until the script is loaded
+    })
+    
+26. this and $(this)
+    this---- a javascript keyword, refers to a DOM object, which will not have the jQuery library functions
+    $(this)--- a jquery wrapper, refers a jQuery object and it is able to call the jQuery library functions
+    
+27. selectors in jQuery
+    fastest selector: id selector
+    slowest selector: pseudo-selectors(:hidden)
+    
+28. Deferred and Promise
+    They helped with handling asynchronous functions like Ajax.
+    Promise:
+    Without promise, Ajax only supports one callback function. Not only the jQuery $.ajax() call, but also the underlying XMLHttpRequest object.
+    Advantages:
+    1). You can call the done() and fail() functions more than once, with different callbacks. Maybe you have a callback function that stops an animation, one that does a new Ajax call and another function that shows the received data to the visitor.
+    2). done() and fail() are still usable after the ajax call is completed, and the callback function can be executed immediately. When an ajax call is completed, it remains the status as succeed or failure and will not be changed.
+    3). You are able to combine promises.
+        var promise1 = $.ajax("/myServerScript1"); var promise2 = $.ajax("/myServerScript2");
+        $.when(promise1, promise2).done(function(xhrObject1, xhrObject2){
+            ...deal with two objects
+        }; 
+    4). Chaining then() is avialable
+    
+    Deferred:
+    A deferred object is a object with asynchronous calls
+    It has two important methods: resolve , reject
+    It has three important "event" or ways to attach a callback: done, fail, always
+    If you call the reject method, the fail callback attached will be executed, the always callback is executed whether the deferred is resolved or rejected.
+    
+    
+29. jQuery.ajax(), jQuery.get(), jQuery.post()
+    jQuery get and post contains features that are subsets of jQuery.ajax().
+    jQuery.ajax pass object to contain necessary parameters to help retreive information, the other two pass arguments.
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

@@ -1,0 +1,169 @@
+1. Inline-level element vs. Block-level element
+    Inline-level elements: It occupies only the space bounded by the tags that define the inline element. (eg. <span>,<a>,<img>,<td>)
+    Block-level elements: It occupies the entire space of its parent element(container), thereby creating a "block". (eg. <div>, <p>,<form>,<h1>,<ul>)
+    
+2. HTML5 quirks mode
+    Little history: In the old days of the web, pages were written in two versions: one for IE, the other for Netscape Navigator. When the web standards were made at W3C, browsers could not directly start using them, as doing so would break most existing sites on the web. Browsers therefore introduced two modes to treat new standards compliant sites differently from old legacy sites, which are the quirks mode and almost standard mode.
+    
+    Quirks Mode: the layout emulates nonstandard behavior in Navigator4 and IE5 to support the websites that were built before the widespread adoption of web standards.
+    
+3. DOCTYPE
+    <!DOCTYPE> must be the very first thing in HTML document, before <html> tag. It is not a html tag, it is an instruction to inform the browser which version of HTML the page is written in.
+    
+4. Cache Buster
+    Purpose: Cache-buster is a unique piece of code that prevents a browser from reusing an ad it has already seen and cached, or saved, to a temporary memory file.
+    
+    How it is accomplished: It uses random number inserted into the ad tag on each page load. The random number makes every ad call look unique to the browser and therefore prevents it from associating the tag with a cached file, forcing a new call to the ad server.
+    
+    Reasons behind the technique: Cache can directly speed up the website, since it will not need to interact with server and download the content. However, for the ad on the webpage, the publisher get paid for every impression, they would prefer the browser does not use the cached ad on the hard drive. Also, the cache can mess with ads' reports and ROI calculation.
+    
+5. px, pt AND em
+    px(Pixels): the absolute size that you would see on your screen.
+    pt(Points): 1pt is equal to 1/72 inch. Fixed size unit.
+    em(Ems): refers to the base text size more like percentage. 1em means the same thing as a value of 100 percent. 
+    vh,vw(view): they are associate with the whole viewport of the browser and act as the percentage of the current viewport width and height.
+
+
+6. div
+    A block level element that can be used as a container for grouping other HTML elements.
+    
+7. span
+    An inline element that can be used as a container for text.
+    
+8. HTML Form
+    It is used to select different kinds of user input, pass data to a server.
+    
+9. iFrame
+    It is used to display a webpage within a webpage. Can be a target for a link.
+    
+10. canvas
+    It is used to draw graphics, on the fly, via scripting. It is only a container for graphics. Pixel-based.
+    
+11. SVG(Scalable Vector Graphics)
+    It is used to define graphics for the web. It is a language for describing 2D graphics in XML. Every element is available within the SVG DOM, can easily interact with. Best suited for applications with large rendering areas.
+    Advantages: (1). SVG images can be searched, indexed, scripted and compressed
+                (2). SVG images are scalable
+                (3). SVG images can be printed with high quality at any resolution
+    Disadvantages: Slow redering if complex(Use DOM a lot will be slow), not suited for game application
+ 
+12. HTML local storage
+    local storage: store user data(large data storage), no expiration date
+    session storage: store user data, gets cleared when session ends--browser closed.
+    cookie: store password, username, searched words(small text files on computer)
+
+13. Web worker
+    It is a JavaScript that runs in the background, independently of other scripts, without affecting the performance of the page. You can continue to interact with the web page while it runs in the background.
+    
+14. Display something with right spacing and line-breaks
+    <pre>: represents preformatted text. It will show the text as it was typed in with spacing and new lines.
+    
+15. label
+    It provides a usability improvement for mouse users, because if the user clicks on the text within the label element, it toggles the control.
+    
+16. To group a list of radio-buttons:
+    All the radio-buttons should share the same name in order to extract the value from the script.
+    
+17. Elements and New attrbiutes for <input> in HTML5:
+    New semantic element: <header> <footer> <article> <section>
+    New form controls like number, date, time, calendar
+    New graphic elements: <svg> <canvas>
+    New multimedia elements: <audio> <video>
+
+18. Object element
+    It defines an embedded object within an HTML document. It is used to embed plug-ins(audio, video, PDF readers, Flash Players) in web pages.
+    
+19. Application Cache
+    It caches web application and accessible without an internet connection.
+    Advantages: Offline Browsing, Speed, Reduced Server Load
+    Disadvantages:  (1). Update one file will cause the whole application to be downloaded again.
+                    (2). Browser will use this version until the manifest has been changed
+                    (3). Unreliable JavaScript API
+                    (4). IE 10 forbids the application cache
+                    
+20. Enable application cache
+    Include the manifest attribute in the document's html tag:
+    <!DOCTYPE html>
+    <html manifest="demo.appcache">
+    ...
+    </html>
+    demo.appcache is a text file which contains all the files the browser should cache for the application.
+    
+21. Cache and Cookie differences:
+    (1). Different Purposes: 
+        Cookie is made to store information to track different characteristics related to user like the user preferences, user name, passwords etc.
+        Cache is made to load the web pages faster(instead of loading from the server), typically keep the resource file like audio, video or flash files
+    (2). Different Life Cycle:
+        Cookie expires after some time
+        Cache exists on the hard drive until manually removed
+        
+22. Geolocation API
+    HTML Geolocation API is used to get the geographical position of a user.(Not available until the user approves it)
+    
+23. HTML Plug-in
+    It extends the functionality of the HTML browser(usually use the object tag or the embed tag)
+    
+24. HTML5 custom attribute
+    Custom attributes are used to store custom data private to the page or application, for which there are no appropriate attributes or elements to describe in native HTML5.
+    Custom data attributes can easily associate some scripting data with the elements without having to insert inline javascript all over the place.
+    
+    A custom attribute has two parts: name=value, eg. <div id="a" data-fruit="12"></div>. The name of the attribute must not contain any uppercase letter. It should start with a prefix:"data-". The value can be any string.
+    With JS, you can extract the attribute:
+        var plant = document.getElementId("a");
+        var fruitCount = plant.getAttribute("data-fruit");
+    
+25. HTML5 custom elements:
+    Allow users to define new types of HTML elements. Elements are created using document.registerElement():
+        var x_element = document.registerElement("x-element");
+        document.body.appendChild(new x_element);
+    The element name must contain a dash. This allows the parser to distinguish custom elements form regular elements but also ensures forward compatibilty when new tags are added to HTML.
+    document.registerElement() has an optional argument to describe the prototype of the element.
+    
+26. Convert the HTMl to XHTML
+    XHTML is HTML4 written as an XML application.(Extensible Hypertext Markup Language)
+    (1). Add XHTML doctype to the first line of every page
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    (2). Add an xmlns attribute to the html element of every page 
+    (3). Change all element names to lowercase 
+    (4). Close all empty elements 
+    (5). Change all attribute names to lowercase 
+    (6). Quote all attribute values
+    
+    XML and HTML difference:
+    Different on purposes:  XML describes data with focus on what data is.
+                            HTML was designed to display data with focus on how data looks.
+                            
+27. HTML5 microdata
+    The Microdata spec provides a standardized syntax for additional semantic markup to your web pages to enhance the machine readability of your web pages. 
+  
+    Microdata defines five HTML attributes that can be applied to any HTML5 tag. Most developers will only ever use itemscope, itemtype and itemprop. Itemref and itemid aren’t necessary to get up and running with microdata and aren’t needed by the most common formats. 
+    Itemscope - Indicates the element is a microdata element and its child elements are part of its microdata format. 
+    Itemtype - Defines the vocabulary to be used by the microdata format. 
+    Itemid - The unique identifier of the item, if defined by the microdata vocabulary. 
+    Itemprop - An individual data element. 
+    Itemref - Allows a microdata element to reference another element on the page to define it by either HTML id or by itemid. 
+
+    
+28. DHTML(Dynamic HTML)
+    DHTML is a collection of technologies used to move beyond the static presentation of information to create more interactive web pages. Technologies like JS, CSS, DOM play a role in the DHTML.
+
+
+
+
+
+
+
+    
+    
+    
+
+
+
+
+
+    
+    
+    
+    
+
+    
+    
