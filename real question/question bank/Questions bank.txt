@@ -414,7 +414,18 @@ FIS:
 
 --------------------------------------------------------------------------------------------------------------
 
+1.what you get (1 == true) in javascript? if(1 === true) what will you get?
+2.how do you get rid of 'false' values in an array? 'false' values means false, null, undefined, 0 
+  answer:(hidden), you can use the array.filter();
+3.can you explain apply, call, and bind?
+4.you have an object, how do you access just all the values of the object?
+  answer: you can use the method Object.values();
+5.can you explain what closure is?
+6.when you the last time you are proud of your work?
+7.what you are regret of your last project?
+8.what is your last unit functional test you wrote?
 
+--------------------------------------------------------------------------------------------------------------
 
 
 
