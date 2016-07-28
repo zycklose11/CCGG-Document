@@ -413,7 +413,7 @@ FIS:
 19.how do you deal with the discussion of the unagreement with the developers?
 
 --------------------------------------------------------------------------------------------------------------
-
+FIS:
 1.what you get (1 == true) in javascript? if(1 === true) what will you get?
 2.how do you get rid of 'false' values in an array? 'false' values means false, null, undefined, 0 
   answer:(hidden), you can use the array.filter();
@@ -426,7 +426,7 @@ FIS:
 8.what is your last unit functional test you wrote?
 
 --------------------------------------------------------------------------------------------------------------
-
+ADP:
 1.what version of angularjs you work so far?
 2.what version of angularjs you work except 1.5?
 3.what is the difference between 1.4 and 1.5 in angularjs?
