@@ -427,7 +427,26 @@ FIS:
 
 --------------------------------------------------------------------------------------------------------------
 
+1.what version of angularjs you work so far?
+2.what version of angularjs you work except 1.5?
+3.what is the difference between 1.4 and 1.5 in angularjs?
+4.what is $digest in angularjs ?
+5.what you use bootstrap in angularjs?(angular bootstrap)?
+6.have you worked with angular js factory and service?or you use both?where do you use?
+7.how do you communicate with your controllers?
+8.have you worked with any customer directives?
+9.what is the difference between $http and $resource?
+10.how do you handle exception in angularjs?
+11.how do you handle if you did not get the data from the restful API?
+12.how do you improve performance in angular js?
+13.how do you improve performance in javascript?
+14.what is prototype in javascript?
+15.what is the difference between == and ===?
+16.var a = 10, var b =0; if (a) ture or false? if(b) true or false?
+17.what is promise in javascript?
+18.how does browser understand what type of your document(html4 or html5)?
 
+--------------------------------------------------------------------------------------------------------------
 
 
 
