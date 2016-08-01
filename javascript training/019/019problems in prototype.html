@@ -47,6 +47,32 @@
 		p1.sayName();
 		console.log(p2.friends);
 		p2.sayName();
+
+		//another dynamic prototype
+		function Person(name, age, friends, job){
+			this.name = name;
+			this.age = age;
+			this.friends = friends;
+			this.job = job;
+
+			if(typeof this.sayName != 'function'){
+				Person.prototype.sayName = function(){
+					console.log(this.name);
+				}
+			}
+		}
+
+		//durable object(very security)
+		//1.no public attribute , 2. can not use this
+		function Person(name, age, job){
+			var obj = new Object();
+			var name = name;
+			obj.sayName = function(){
+				console.log(name);
+			}
+
+			return obj;
+		}
 	</script>
 </head>
 <body>

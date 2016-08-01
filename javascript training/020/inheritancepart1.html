@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>020 Inheritance Method1</title>
+	<script type="text/javascript">
+	//how to achive inheritance
+	//1.constructed function.prototype = prototype object
+	//2.prototype object.constructor = constructed function
+	//3.prototype object.isPrototypeOf(instance object) = ture 
+
+	//parent constructed function
+	function Super(name){
+		this.name = name;
+	}
+	//parent prototype object
+	Super.prototype = {
+		constructor: Super,
+		sayName : function(){
+			console.log('This is ' + this.name);
+		}
+	}
+	//child constructed function
+	function Suber(age){
+		this.age = age;
+	}
+	//method to achive inheritance
+	//we make the protype object of the child equals the instance object of the parent
+	Suber.prototype = new Super('mike');
+	console.log(Suber.prototype.constructor);
+	var sub1 = new Suber();
+	console.log(sub1.name);
+	sub1.sayName();
+	</script>
+</head>
+<body>
+
+</body>
+</html>

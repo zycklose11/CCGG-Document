@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>020 Inheritance part2</title>
+	<script type="text/javascript">
+	//prototype inheritance
+
+	//parent class
+	function Person(name, age){
+		this.name = name;
+		this.age = age;
+	}
+
+	//child class
+	function Boy(sex){
+		this.sex = sex;
+	}
+
+	//achive inheritance
+	Boy.prototype = new Person('mike', 40);
+	var b = new Boy();
+	console.log(b.name);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
