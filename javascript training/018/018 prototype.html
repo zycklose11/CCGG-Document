@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>018 Prototype</title>
+	<script type="text/javascript">
+	//simple prototype
+	function Person(){
+
+	}
+	//Person.prototype.name = ;
+	Person.prototype = {
+		//constructor: Person, //you should add this 
+		name:'mike',
+		age:20,
+		job:'developer',
+		say:function(){
+			console.log('I am prototype!');
+		}
+	};
+
+	//you can use Object.defineProperty() to add constructor in property
+	//three arguments 1st which object 2st which property you define 3rd options
+	Object.defineProperty(Person.prototype, 'constructor', {
+		enumerable : false,
+		value: Person
+	});
+	var p1 = new Person();
+	console.log(p1.name);
+	p1.say();
+	console.log(Person.prototype.constructor);
+
+	for (attr in p1) {
+		console.log(attr);
+	};
+	console.log(Object.getOwnPropertyNames(p1.constructor.prototype));
+
+	
+	console.log('----------------------------------');
+	function Animal(){
+
+	}
+
+	var a1 = new Animal();
+
+	Animal.prototype.say = function(){
+		console.log('This is animal');
+	}
+
+	a1.say();
+
+	console.log('----------------------------------');
+
+	function Ani(){
+
+	}
+
+	var a2 = new Ani(); //be careful with the order why this one is wrong
+
+	Ani.prototype = {
+			say: function(){
+				console.log('This is animal');
+			}
+		}
+
+	a2.say();
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

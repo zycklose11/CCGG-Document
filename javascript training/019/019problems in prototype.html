@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>019 Problems in prototype</title>
+	<script type="text/javascript">
+		// function Person(){
+
+		// }
+
+		// Person.prototype = {
+		// 	constructor:Person,
+		// 	name:'mike',
+		// 	age:20,
+		// 	job:'developer',
+		// 	friends:['jenny','micheal'],
+		// 	sayName: function(){
+		// 		console.log('This is Mike!')
+		// 	}
+		// }
+
+		// var p1 = new Person();
+		// var p2 = new Person();
+		// p1.friends.push('steven');
+		//how to deal with this, it will change both p1 and p2
+		// console.log(p1.friends);
+		// console.log(p2.friends);
+
+		//combination use the prototype and constructor to define a class
+		function Person(name, age, friends, job){
+			this.name = name;
+			this.age = age;
+			this.friends = friends;
+			this.job = job;
+		}
+
+		Person.prototype = {
+			constructor: Person,
+			sayName: function(){
+				console.log(this.name);
+			}
+		}
+
+		var p1 = new Person('mike', 35, ['jenny', 'steven'], 'PM');
+		var p2 = new Person('jenny', 32, ['mike', 'steven'], 'BA');
+
+		console.log(p1.friends);
+		p1.sayName();
+		console.log(p2.friends);
+		p2.sayName();
+	</script>
+</head>
+<body>
+
+</body>
+</html>
