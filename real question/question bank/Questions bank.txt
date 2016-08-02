@@ -447,7 +447,16 @@ ADP:
 18.how does browser understand what type of your document(html4 or html5)?
 
 --------------------------------------------------------------------------------------------------------------
-
+vonage:
+1.what is z-index feature?
+2.the difference between Normalize.css and Reset CSS?
+3.the difference between id and class?
+4.if you use html4 standard and put html5 tag in the page, what will happen?
+5.what is <!DOCTYPE> used for?
+6.do you use SEO in your project?
+7.what is qurid mode> what is strict mode?
+8.which editior will you use?
+9.how do you use bootstrap to do the responsive web design?
 
 
 
