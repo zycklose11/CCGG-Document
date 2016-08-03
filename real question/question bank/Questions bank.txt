@@ -108,6 +108,10 @@ Verizon
 7. If I have a <ul>, and 5 different <li>, how can I get to the <li> number 3?
    answer: we can use n-th child of the selector. $(ul li:nth-child(3)) or we can use the eq() method $(ul li).eq(2)
 8. webpage have multiple <ul> with multiple <li>, how to get to the correct <li> you need?
+   answer:
+   if those list belongs to different parent class, then use $(className ul) to select it.
+   if the list belongs to a same class, we'd better give them different class name, then select the <li> by nth-child.
+   we can also add the specifed id to the li element.
 9. AJAX: can you describe, how you make the call to the server and grab the data? ANd then, how you catch the data from the server, and check whether it successes or fail?
 10. Describe couple attributes in HTML5
 11. What we use that attributes for?
