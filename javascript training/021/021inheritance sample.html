@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>021 inheritance sample</title>
+	<script type="text/javascript">
+
+	//mixed inheritance
+	function Person(name, age){
+		this.name = name;
+		this.age = age;
+	}
+
+	Person.prototype = {
+		sayName : function(){
+			console.log('hello javascript');
+		}
+	}
+	function Boy(name, age, sex){
+		this.sex = sex;
+	}
+
+	var b = new Boy('mike', 40, 'male');
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

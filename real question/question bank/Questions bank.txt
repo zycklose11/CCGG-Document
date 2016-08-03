@@ -106,6 +106,7 @@ Verizon
 5. JQuery plugins functions?
 6. Can you tell me a situation that you have to use jquery appendTo method?
 7. If I have a <ul>, and 5 different <li>, how can I get to the <li> number 3?
+   answer: we can use n-th child of the selector. $(ul li:nth-child(3)) or we can use the eq() method $(ul li).eq(2)
 8. webpage have multiple <ul> with multiple <li>, how to get to the correct <li> you need?
 9. AJAX: can you describe, how you make the call to the server and grab the data? ANd then, how you catch the data from the server, and check whether it successes or fail?
 10. Describe couple attributes in HTML5
