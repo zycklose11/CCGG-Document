@@ -18,9 +18,9 @@
 			var a7 = 0.2;
 			if((a6+a7).toFixed(1) == 0.3){
 				//if((a6+a7) == 0.3){
-				console.log('equal');
+				//console.log('equal');
 			}else{
-				console.log('not equal');
+				//console.log('not equal');
 			}
 
 			var a8 = parseInt('aabbcc'); //Not a Number
@@ -28,7 +28,7 @@
 
 			//var a9 = parseInt('12aabbcc');
 			var a9 = parseInt('aa12bbcc');
-			//console.log(a9);
+			console.log(a9);
 
 			//undefined data type only one value undefinied 
 			//it means you have declared the variable but not give a value
@@ -64,7 +64,7 @@
 			var c7 = [1,2,3];
 
 			for(var i = 1 ; i < 8; i++){
-				//console.log(typeof(eval('c' + i)));
+				console.log(typeof(eval('c' + i)));
 			}
 
 			var d1 = undefined;
@@ -73,6 +73,15 @@
 			var d2 = null;  //it means a reference of an empty object
 			console.log(d2);
 
+			var e1 = '4';
+			var e2 = 2;
+			var e3 = 2;
+			console.log(e1 + e2 + e3);
+			console.log(e2 + e3 + e1);
+			console.log(e1 + e2);
+			console.log(e2 + e1);
+			console.log(e1 - e2);
+			console.log(e2 - e1);
 	</script>
 </head>
 <body>
