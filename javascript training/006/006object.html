@@ -5,37 +5,49 @@
 	<script type="text/javascript">
 		//Object
 		//var obj = new Object();
-		var obj = {};
-		//this method is prefered
+		// var obj = {};
+		// //this method is prefered
 
-		obj.name = 'mike';
-		obj.age = 30;
-		obj.sex = 'female';
-		obj.say = function(){
-			alert('hello javascript');
+		// obj.name = 'mike';
+		// obj.age = 30;
+		// obj.sex = 'female';
+		// obj.say = function(){
+		// 	console.log('hello javascript');
+		// }
+
+		var obj = {
+			name : 'mike',
+			age : 30,
+			say : function(){
+			console.log('hello javascript');
+		}
 		}
 		//obj.attribute = 'attribute';
 		//how to get the attribution and method 
-		//console.log(obj.name);
-		//console.log(obj.age);
-		//obj.say();
+		console.log(obj.name);
+		console.log(obj['name']);
+		// console.log(obj.age);
+		// obj.say();
 
 		//delete to delete the attribute and method of an object
 
-		//delete obj.age;
-		//delete obj.name;
+		// delete obj.age;
+		// delete obj.name;
+		//delete obj.say;
 		//console.log(obj.name);
 		//console.log(obj.age);
-		//obj.say();
+		// obj.say();
 
 		//how to Traversal an object for in 
 		for(var attribute in obj){
-			//console.log(attribute + ' : ' + obj[attribute]) ;
+			//console.log(attribute);
+			//console.log(typeof attribute);
+			//console.log(attribute + ' : ' + obj[attribute]);
 			//console.log(attribute + ' : ' + obj.attribute);
-			//console.log(attribute + ' : ' + eval('obj.'+ attribute)) ;
+			//console.log(attribute + ' : ' + eval('obj.'+ attribute));
 		}
 		//constructor
-		var arr = [];
+		//var arr = [];
 		//console.log(arr.constructor);
 
 		//hasOwnProperty(propertyName) to test if the object has this property

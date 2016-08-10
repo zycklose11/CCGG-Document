@@ -15,9 +15,10 @@
 		var arr = [1,2,3,4,5,4,3,2,1];
 
 		var result = arr.every(function(item, index){
+			//console.log(item);
 			return item > 1;
 		});
-		//console.log(result);
+		console.log(result);
 		//filter filter every element of an array
 		var result2 = arr.filter(function(item, index){
 			return item > 2;
@@ -26,14 +27,15 @@
 		//forEach
 		arr.forEach(function(item,index){
 			//console.log(item);
+			//return item*2
 
-		})
+		});
 		//map
 
 		var result3 = arr.map(function(item, index){
 			return item*2;
 		})
-		console.log(result3)
+		console.log(result3);
 		//some difference between every and some if every one returns flase then some returns false else ture
 		var result4 = arr.some(function(item, index){
 			return item > 4;
