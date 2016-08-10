@@ -100,22 +100,32 @@ client
 
 Verizon
 1. Where you locate, east coast or west coast
-2. Our team, what we do...
 3. lastest job and the responsibility descriptions?
 4. What did you do with JQuery?
 5. JQuery plugins functions?
+answer: plugin provide useful jQuery methods which is widely used along with jQuery library methods. For example, I have used jQuery plug-in to create a responsive and mobile friendly date(not data) selector, and another plug-in to help indicate how complex a password is. For example, a password contains a combination of upper/lower case letter and number is strong enough.
+
 6. Can you tell me a situation that you have to use jquery appendTo method?
+answer:  appendTo() is used to add html text at the end selected element.
+
 7. If I have a <ul>, and 5 different <li>, how can I get to the <li> number 3?
-   answer: we can use n-th child of the selector. $(ul li:nth-child(3)) or we can use the eq() method $(ul li).eq(2)
+answer: we can use n-th child of the selector. $(ul li:nth-child(3)) or we can use the eq() method $(ul li).eq(2)
+
 8. webpage have multiple <ul> with multiple <li>, how to get to the correct <li> you need?
-   answer:
-   if those list belongs to different parent class, then use $(className ul) to select it.
-   if the list belongs to a same class, we'd better give them different class name, then select the <li> by nth-child.
-   we can also add the specifed id to the li element.
+answer: if those list belongs to different parent class, then use $(className ul) to select it. if the list belongs to a same class, we'd better give them different class name, then select the <li> by nth-child.we can also add the specifed id to the li element.
+   
 9. AJAX: can you describe, how you make the call to the server and grab the data? ANd then, how you catch the data from the server, and check whether it successes or fail?
+answer: I will apply jQuery AJAX call. If I want to grab data, I will use $.get() method. In order to check the success of data catching, just chain .success() and .error() with proper function.
 10. Describe couple attributes in HTML5
+answer: id: name the element with an unique id.
+  		background: set the url indicating the background image.
+  		hidden: specifies whether the element is visible.
 11. What we use that attributes for?
+answer: Some attributes are set globally and can be used on any elements, while others are defined for specific elements only. They are used to set properties of the elements.
+
 12. What is the difference between css visiability=hidden, and the display=none?
+answer: when using visiability, the element still exists and its width, height and position remain the same. when using display: none the element will not be loaded and its attribute like width, height and position will lost.
+
 13. Can you describe active work culture in javascript
 14. What did you describe the parameter from the url
 15. jQuery date picker.....jQuery plugin
@@ -123,8 +133,12 @@ Verizon
 17. what is your favourite programming language? What did you use before that?
 18. What is the most interesting code you use to solve the chanllenges
 19. In jQuery, why do you use a document ready
+answer: It is used to ensure the safety of manipulating web page. jQuery method will be applied after the DOM is completely loaded in case selector fail to access the elements.
 20. what is the jquery or javascript method you use to extract data form the response
+answer: $("#response").html(data); 
+  		var data = JSON.parse(responseTxt);
 21. What kind of methods can you use to get into an object to get the key values
+answer:  for(var i in object){console.log(object[i]);}  	
 
 --------------------------------------------------------------------------------------------------------------
 
