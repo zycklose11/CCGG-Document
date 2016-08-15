@@ -13,7 +13,7 @@
 			//console.log(obj.name);
 			obj.name = 'json';
 
-			//console.log(obj.name);
+			//console.log(obj);
 
 			//1.make the array to a js object
 			function toObject(arr){
@@ -21,9 +21,10 @@
 
 				for(var i = 0; i < arr.length; i++){
 					//2.make the value of the array to the key of the new object
-					obj[arr[i]] = 1;
+					//console.log('arr[i]',arr[i]);
+					obj[arr[i]] = 3;
 				}
-				console.log('obj',obj);
+				console.log('obj2',obj);
 				return obj;
 			}
 			
@@ -33,10 +34,8 @@
 				var arr = [];
 				for(var attr in obj){
 					console.log('attr' ,attr);
-					if(obj.hasOwnProperty(attr)){
-						arr.push(attr);
-						console.log('arr',arr);
-					}
+					arr.push(attr);
+					console.log('arr',arr);
 				}
 				return arr;
 			}

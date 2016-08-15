@@ -520,6 +520,57 @@ var fruit = {
 }
 fruit.loops();
 
+3.Clicking the 'Empty List' link should remove all the elements from the list.
+<ul>
+	<li>Item1</li>
+	<li>Item2</li>
+	<li>Item3</li>
+	<li>Item4</li>
+	<li>Item5</li>
+</ul>
+
+answer:
+function removeelements(){
+    var	list = document.getElementsByTagName('li');
+    for(var i=list.length-1;i>=0;i--){
+        list[i].parentNode.removeChild(list[i]); 
+    }
+}
+
+4.Given this project:
+var f = (funciton(){
+	return {
+	foo : "bar",
+	moo : function(callback){
+		callback.call(this);
+	}
+	}
+})();
+
+how to alert 'bar' by using moo(without any errors in the console)
+answer: f.moo(function(){alert(this.foo);});
+
+5.
+<p> Each of the links should alert 0, 1, 2 respectively, </p>
+<ul>
+	<li><a href="#">Link 0</li>
+	<li><a href="#">Link 1</li>
+	<li><a href="#">Link 2</li>
+</ul>
+
+answer:
+<script>
+	(function() {
+	var anchors = document.getElementsByTagName('a');
+	for (var i = 0; i < anchors.length; i++) {
+		anchors[i].onclick = (function(index) {
+			return function() {
+				alert(index);
+			}
+		})(i);
+	}
+})();
+</script>
 ---------------------------------------------------------------------------------------------------------------
 
 

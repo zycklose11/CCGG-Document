@@ -37,12 +37,13 @@
 		var str3 = unescape(str2);
 		console.log(str3);
 
-		//isNaN to test if this is a number
+		//isNaN to test if this is not a number
 		var num1 = '10' ;
 		var num2 = '10abcd';
+		var num3 = 10;
 		console.log(isNaN(num1));
 		console.log(isNaN(num2));
-
+		console.log(isNaN(num3));
 		//in JS NaN is not equal NaN
 		if(NaN == NaN){
 			console.log('equal')
@@ -65,7 +66,7 @@
 		var second = date.getSeconds();
 		var dayofweek = date.getDay();
 
-		document.write('Today is ' + year + '/' + month + '/' +day +':' +dayofweek);
+		document.write('Today is ' + year + '/' + month + '/' +day +':' +dayofweek + second);
 	</script>
 </head>
 <body>

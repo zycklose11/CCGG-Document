@@ -25,7 +25,7 @@
 		//obj.attribute = 'attribute';
 		//how to get the attribution and method 
 		console.log(obj.name);
-		console.log(obj['name']);
+		console.log(obj[name]);
 		// console.log(obj.age);
 		// obj.say();
 
@@ -39,12 +39,13 @@
 		// obj.say();
 
 		//how to Traversal an object for in 
-		for(var attribute in obj){
-			//console.log(attribute);
-			//console.log(typeof attribute);
-			//console.log(attribute + ' : ' + obj[attribute]);
-			//console.log(attribute + ' : ' + obj.attribute);
-			//console.log(attribute + ' : ' + eval('obj.'+ attribute));
+		for(var property in obj){
+			console.log(property);
+
+			console.log(typeof property);
+			console.log(property + ' : ' + obj[property]);
+			console.log(property + ' : ' + obj.property);
+			console.log(property + ' : ' + eval('obj.'+ property));
 		}
 		//constructor
 		//var arr = [];

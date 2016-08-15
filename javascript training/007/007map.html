@@ -13,7 +13,7 @@
 		//get the size of the map
 		this.size = function(){
 			var count = 0
-			for(var attr in obj){
+			for(var key in obj){
 				count++;
 			}
 			return count;
@@ -47,12 +47,12 @@
 	var map = new Map();
 	map.put('1','abc');
 	map.put('2',120);
-	map.put('3',true);
+	map.put('3',false);
 	map.put('4',new Date());
 	//console.log(map.size());
 	//console.log(map.get('3'));
 	map.remove('3');
-	console.log(map.get('3'));
+	//console.log(map.get('3'));
 
 	map.eachMap(function(key, value){
 		console.log(key + " : "+ value);
