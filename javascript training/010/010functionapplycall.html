@@ -47,10 +47,11 @@
 		}
 
 		var o = new Obj(10,20);
-		console.log(o);
-		o.method = test1;
+		//console.log(o);
+		//o.method = test1;
 		//console.log(o.method(o.x,o.y));
-		delete o.method;
+		//delete o.method;
+
 		console.log(test1.call(o, o.x, o.y));
 		console.log(o);
 	</script>

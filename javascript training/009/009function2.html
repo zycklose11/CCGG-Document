@@ -6,32 +6,37 @@
 	//3 methods to create a function
 
 	//1.
-
+	//hoisting
 	function test1(){
 		console.log('this is test1');
 	}
-	test1();
+	//test1();
 
 	//2. recommended
 	var test2 = function(){
 		console.log('this is test2');
 	}
-	test2();
+	//test2();
 
 	//3.
 	var test3 = new Function('a','b','return a + b;');
+	//var test3 = function(a,b){
+	//	return a + b;
+	//}
 	console.log(test3(1,2));
 
 	//the sequence for the two methods
+
 	 var test5 = function(){
     	console.log('test5');
     }
-
+     test5();
+    test4();
     function test4(){
     	console.log('test4');
     }
-        test5();
-    test4();
+
+
 
    
 
