@@ -107,6 +107,13 @@
             return instance;
         }};
     })();
+    function run(){
+ 
+    var instance1 = Singleton.getInstance();
+    var instance2 = Singleton.getInstance();
+ 
+    alert("Same instance? " + (instance1 === instance2));  
+    }
 
 22. How to catch unhandled JavaScript errors?
     Assign the window.onerror event to event handler.
