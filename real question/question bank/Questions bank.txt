@@ -432,32 +432,90 @@ FIS:
 ADP:
 1.what version of angularjs you work so far?
 4.what is $digest in angularjs ?
+answer：$digest() triggers the data binding to update. 
+When the variable on the $scope changes, AngularJS will call the $digest() automatically and trigger the view to be updated. 
+In some situation, AngularJS does not call the $digest() automatically. The $scope variables have the new values, but the new values are not updated in the HTML. In that case, we can call $scope.$digest().
+
 5.what you use bootstrap in angularjs?(angular bootstrap)?
+answer:UI bootstrap: Bootstrap components written in pure AngularJS.
+angular.module('myModule', ['ui.bootstrap']);
+
 6.have you worked with angular js factory and service?or you use both?where do you use?
+answer:I worked with AngularJS factory and service. I use factory to do ajax call to get data from the restful web service and store the data in the data factory and service to share the data between difference controllers and build common business logic (reusable functions).
+
 7.how do you communicate with your controllers?
+answer: 1). Use service (get and set)
+		2). listen for and emit (broadcast) events
+
 8.have you worked with any customer directives?
+answer: I created the customer directives for the nav bar, same style chart and filter bar. 
+
 9.what is the difference between $http and $resource?
+answer:$resource is a simplified $http.
+e.g. get the data from the API url, in $http, we need success callback function, but in $resource, we only need .query(). 
+post the data to the server, in $http, we need to use post method, in $resource, we only need $save().
+
 10.how do you handle exception in angularjs?
+answer:AngularJS provides a service called $exceptionHandler. It handles errors by capturing them and logging them to the console using the $log service.
+
 11.how do you handle if you did not get the data from the restful API?
+answer:Use error callback function. Use promise to report failure. 
+
 12.how do you improve performance in angular js?
+answer:Ng-bind is faster than {{}}, ng-style is much faster than ng-class, use ng-if instead of ng-show,
+
 13.how do you improve performance in javascript?
+answer:Use local function variables instead of global variables.
+	   Don’t use nested loops if not required
+	   Place JavaScript at the bottom of the page
+       Avoid unnecessary closures. Slower.
+       Minification.
+
 14.what is prototype in javascript?
+answer:Every JS object has a prototype. The prototype is also an object.We can add prototype properties or methods to the object by using prototype property.All JavaScript objects inherit their properties and methods from their prototype.
+
 15.what is the difference between == and ===?
+answer:“==” compares only value.
+	   “===” compares value and type.
+
 16.var a = 10, var b =0; if (a) ture or false? if(b) true or false?
+answer:A is ture and b is false.
+
 17.what is promise in javascript?
+answer:promise is used to get access to the result of the deferred task when it completes. (report success or failure)
+
 18.how does browser understand what type of your document(html4 or html5)?
+answer:html5 <!DOCTYPE html>
+	   html4 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 
 --------------------------------------------------------------------------------------------------------------
 vonage:
 1.what is z-index feature?
+answer: The z-index property specifies the stack order of an element.
+An element with greater stack order is always in front of an element with a lower stack order.
+
 2.the difference between Normalize.css and Reset CSS?
+answer: CSS resets aim to remove all built-in browser styling. Standard elements like H1-6, p, strong, em, et cetera end up looking 		exactly alike, having no decoration at all. You're then supposed to add all decoration yourself.
+		Normalize CSS aims to make built-in browser styling consistent across browsers. Elements like H1-6 will appear bold, larger in a consistent way across browsers. You're then supposed to add only the difference in decoration your design needs.
+
 3.the difference between id and class?
+answer: id id unique, class can be a group
+
 4.if you use html4 standard and put html5 tag in the page, what will happen?
 5.what is <!DOCTYPE> used for?
+answer: it tells the browser the standard of the file is HTML 5
+
 6.do you use SEO in your project?
+answer；
+
 7.what is qurid mode> what is strict mode?
+  
 8.which editior will you use?
+answer：subline text, visual studio
+
 9.how do you use bootstrap to do the responsive web design?
+answer: we used the bootstrap grid system to do the responsive web design, each row has 12 cols we used the class name as
+<div class='col-lg-2'>,<div class='col-md-2'>,<div class='col-sm-2'>,<div class='col-xs-2'> to define the grid system.
 
 ---------------------------------------------------------------------------------------------------------------
 Comcast:
