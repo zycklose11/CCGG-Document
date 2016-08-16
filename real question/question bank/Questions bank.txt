@@ -38,24 +38,12 @@ vendor
 
 --------------------------------------------------------------------------------------------------------------
 vendor
-1. Could you please introduce me your last project
-2. What is the biggest changllenge in the project
-3. What are the primary backend technology used in the project
-4. Do you have expeirence in multi thread and ?? programming
-5. Do you have any experience of maven
-6. Do you know the maven repository and devs?
-7. explain what the ?? and the drawbacks of it?
-8. Do you have any experience in Spring? Use spring webservice
-9. control button in spring
-
---------------------------------------------------------------------------------------------------------------
-vendor
 1. Could you explain how did you handle inheritence in javascript?
 2. What is negative infinity in javascript? Number.NEGATIVE_INFINITY
 3. Can you explain to me the 
 4. what is prompt?
 5. How do you do animation in jQuery?
-6. Can you explina to me some security issues in AJAX?
+6. Can you explain to me some security issues in AJAX?
 --------------------------------------------------------------------------------------------------------------
 vendor
 1. Why do you use bootstrap3
@@ -65,7 +53,6 @@ vendor
 --------------------------------------------------------------------------------------------------------------
 vendor
 1. Can we have multiple document.ready function in the same page?
-2. $.noconflit()?
 3. clone function in jQuery
 --------------------------------------------------------------------------------------------------------------
 
@@ -91,7 +78,7 @@ client
 6. Did you use any event catching machnisims? 
 7. What you've done with broadcast?
 8. You have ng-click double-click on the button, why do you need angular broadcast
-9. In css, did you use any preprocess? LESS and SAS
+9. In css, did you use any preprocess? LESS and SASS
 10. What do you create disired design for computer and other mobile devices
 11. In angular, what is an isolate scope?
 
@@ -164,7 +151,6 @@ Cannot hear a thing, update the equiment or put it at the correct place!!!! The 
 3. difference between == and ===?
 4. difference between Java and JavaScript
 5. JavaScript Inheritence
-6. Difference of angularjs and reactjs
 7. Callback functions, what is it?
 8. Use strict? why? How it affects the application
 9. Hoisting.
@@ -181,7 +167,6 @@ Cannot hear a thing, update the equiment or put it at the correct place!!!! The 
 russina
 1. What kind of job do you want to do ????? really...
 2. Array of propertities, a property have a name, user ID,size, how do you handle deletion and addition to that? 
-3. what is the difference between the sas and scss?
 4. difference with factory, service and provider
 5. difference ng-route and ui-route
 
@@ -208,7 +193,6 @@ Barkley一面
 2. what is backend technologies?
 3. What is the difference of the factory and service
 4. Did you use any third party libraries to create directive on top of it? Examples
-5. Events used 
 
 --------------------------------------------------------------------------------------------------------------
 Sparta System
@@ -447,8 +431,6 @@ FIS:
 --------------------------------------------------------------------------------------------------------------
 ADP:
 1.what version of angularjs you work so far?
-2.what version of angularjs you work except 1.5?
-3.what is the difference between 1.4 and 1.5 in angularjs?
 4.what is $digest in angularjs ?
 5.what you use bootstrap in angularjs?(angular bootstrap)?
 6.have you worked with angular js factory and service?or you use both?where do you use?
